@@ -1,8 +1,25 @@
+/* 'Crimson Pro', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
 :root {
-    --font-display: 'Futura';
+    --typography-base: 1rem;
+
+    --typogaphy-h1: calc(4 * var(--typography-base)); /* article title */
+    --typography-h2: calc(3 * var(--typography-base)); /*chapter title */
+    --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
+    --typography-blockquote: calc(3 * var(--typography-base)); /*blockquote*/
+    --typography-a: calc(0.5 * var(--typography-base)); /* nav links */
+    --typography-footerp: calc(0.8 *var(var(--typography-base)));
+
+    --gutter: var(--typography-base);
 }
 
 body {
     margin-left: calc(1.5 * var(--gutter));
     margin-right: calc(1.5 * var(--gutter));
+}
+
+h1 {
+    font-family: 'Crimson Pro', serif;
+    font: var(--typography-h1);
 }

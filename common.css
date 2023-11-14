@@ -1,6 +1,42 @@
+/* 'Onest', sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap');
+
+/* 'Chivo', sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap'); 
+
+/* 'Almarai', sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Chivo:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+/* 'IBM Plex Mono', monospace */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+/* 'DM Sans', sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+/* 'Lora', serif */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+/* 'Work Sans', sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+/* 'Archivo', sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+/* 'Rubik', sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Rubik:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* 'Inknut Antiqua', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700&display=swap');
+
+/* 'Averia Serif Libre', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,400;1,300;1,400&display=swap');
+
+/* 'Crimson Pro', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
 :root {
     --typography-base: 1em;
-    
+
     --gutter: var(--typography-base);
 }
 
@@ -9,7 +45,3 @@ h1 {
     margin-bottom: var(--spacing);
 }
 
-main {
-    margin-left: calc(1.5 * var(--gutter));
-    margin-right: calc(1.5 * var(--gutter));
-}

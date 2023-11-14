@@ -1,11 +1,14 @@
 /* 'Crimson Pro', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
+/* 'Chivo', sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap'); 
+
 :root {
     --typography-base: 1rem;
 
     --typogaphy-h1: calc(4 * var(--typography-base)); /* article title */
-    --typography-h2: calc(3 * var(--typography-base)); /*chapter title */
+    --typography-h2: calc(2.5 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
     --typography-blockquote: calc(3 * var(--typography-base)); /*blockquote*/
     --typography-a: calc(0.5 * var(--typography-base)); /* nav links */
@@ -21,5 +24,18 @@ body {
 
 h1 {
     font-family: 'Crimson Pro', serif;
-    font: var(--typography-h1);
+    font-size: var(--typography-h1);
+    padding: var(--gutter);
+}
+
+h2 {
+    font-family: 'Chivo', sans-serif;
+    font-size: var(--typography-h2);
+    padding-bottom: var(--gutter);
+    padding-top: calc(1 * var(--gutter));
+}
+
+p {
+    font-size: var(--typography-base);
+    padding-bottom: var(--gutter);
 }

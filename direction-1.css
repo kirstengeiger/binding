@@ -1,4 +1,12 @@
 :root {
-    --font-display: 'Comic Sans MS';
-    --typography-base: 1em;
+    --typography-base: 1rem;
+
+    --typogaphy-h1: calc(4 * var(--typography-base)); /* article title */
+    --typography-h2: calc(3 * var(--typography-base)); /*chapter title */
+    --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
+    --typography-blockquote: calc(3 * var(--typography-base)); /*blockquote*/
+    --typography-a: calc(0.5 * var(--typography-base)); /* nav links */
+    --typography-footerp: calc(0.8 *var(var(--typography-base)));
+
+    --gutter: var(--typography-base);
 }

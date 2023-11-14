@@ -1,40 +1,124 @@
 :root {
     --typography-base: 1rem;
 
-    --typography-h1: calc(3 * var(--typography-base)); /* article title */
+    --typography-h1: calc(7 * var(--typography-base)); /* article title */
     --typography-h2: calc(2.5 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
-    --typography-blockquote: calc(3 * var(--typography-base)); /*blockquote*/
+    --typography-quote: calc(2 * var(--typography-base)); /*blockquote*/
     --typography-a: calc(0.5 * var(--typography-base)); /* nav links */
     --typography-footerp: calc(0.8 *var(var(--typography-base)));
 
     --gutter: var(--typography-base);
 }
 
+body {
+    background-color: #F8F3F0;
+}
+
+.nav {
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+    background-color: black;
+}
+
+button {
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-size: calc(2 * var(--typography-base));
+    color: #F8F3F0;
+}
+
+head {
+    margin-left: var(--gutter);
+}
+
 article {
-    margin-left: calc(1.5 * var(--gutter));
-    margin-right: calc(1.5 * var(--gutter));
+    padding-top: calc(1.5 * var(--gutter));
 }
 
 h1 {
-    font-family: 'Chivo', serif;
+    font-family: 'Chivo', sans-serif;
     font-size: var(--typography-h1);
-    padding-top: calc(2 * var(--gutter));
+    color: #2E7EDD;
     padding-bottom: var(--gutter);
+    padding-left: var(--gutter);
+    margin-top: var(--gutter);
 }
 
 h2 {
     font-family: 'Chivo', sans-serif;
     font-size: var(--typography-h2);
+    padding-top: calc(1 * var(--gutter));
     padding-bottom: var(--gutter);
+    margin-bottom: calc(2 * var(--gutter));
+    max-width: 80vw;
+}
+
+blockquote {
+    font-size: var(--typography-quote);
+    padding-top: calc(1 * var(--gutter));
+    padding-bottom: calc(1 * var(--gutter));
+    margin-bottom: calc(1.5 * var(--gutter));
+}
+
+section {
+    padding-left: calc(1.5 * var(--gutter));
+    padding-right: calc(1.5 * var(--gutter)); 
+    padding-top: calc(1.5 * var(--gutter)); 
+}
+
+h4 {
+    font-family: 'Chivo', sans-serif;
+    font-size: calc(1.5 * var(--typography-base));
+    background-color: #2E7EDD;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+    padding-left: calc(1.5 * var(--gutter));
+}
+
+div {
+    /*width: 200px;
+    height: 100px;*/
+    border: 3px solid #2E7EDD;
+    margin-top: calc(2 * var(--gutter));
+    /*margin: 10px;*/
+}
+
+section {
+    padding-left: calc(1.5 * var(--gutter));
+    padding-right: calc(1.5 * var(--gutter));
+}
+
+h2 {
+    padding-left: var(--gutter);
+}
+
+.quote {
+    font-family: 'Chivo', sans-serif;
     padding-top: calc(1 * var(--gutter));
     max-width: 80vw;
+}
+
+.name {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 300;
+}
+
+h3 {
+    font-family: 'IBM Plex Mono', sans-serif;
+    padding-bottom: var(--gutter);
 }
 
 p {
     font-family: 'IBM Plex Mono', monospace;
     font-size: var(--typography-base);
     padding-bottom: var(--gutter);
+}
+
+hr {
+    display: block;
+    height: 5px;
+    color: black;
+    width: 100vw;
 }
 
 a:not([href^="#"]) {
@@ -52,3 +136,4 @@ a:not([href^="#"]):visited {
  a:not([href^="#"]):visited:hover {
     color: rgb(1, 1, 213);
  }
+

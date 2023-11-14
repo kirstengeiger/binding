@@ -43,17 +43,11 @@
     --gutter: var(--typography-base);
 }
 
-article {
-    margin-left: calc(1.5 * var(--gutter));
-    margin-right: calc(1.5 * var(--gutter));
-}
-
 .nav {
     position: sticky;
     align-items: left;
     text-align: left;
     top: 0;
-    background: gray;
     padding-left: calc(1.5 * var(--gutter));
 }
 

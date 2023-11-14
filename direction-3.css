@@ -1,9 +1,3 @@
-/* 'Crimson Pro', serif; */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
-
-/* 'Chivo', sans-serif */
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap'); 
-
 :root {
     --typography-base: 1rem;
 
@@ -17,7 +11,7 @@
     --gutter: var(--typography-base);
 }
 
-body {
+article {
     margin-left: calc(1.5 * var(--gutter));
     margin-right: calc(1.5 * var(--gutter));
 }
@@ -33,6 +27,7 @@ h2 {
     font-size: var(--typography-h2);
     padding-bottom: var(--gutter);
     padding-top: calc(1 * var(--gutter));
+    max-width: 80vw;
 }
 
 p {

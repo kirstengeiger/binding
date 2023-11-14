@@ -1,7 +1,7 @@
 :root {
     --typography-base: 1rem;
 
-    --typogaphy-h1: calc(4 * var(--typography-base)); /* article title */
+    --typography-h1: calc(3 * var(--typography-base)); /* article title */
     --typography-h2: calc(2.5 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
     --typography-blockquote: calc(3 * var(--typography-base)); /*blockquote*/
@@ -17,9 +17,10 @@ article {
 }
 
 h1 {
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Chivo', serif;
     font-size: var(--typography-h1);
-    padding: var(--gutter);
+    padding-top: calc(2 * var(--gutter));
+    padding-bottom: var(--gutter);
 }
 
 h2 {
@@ -31,6 +32,23 @@ h2 {
 }
 
 p {
+    font-family: 'IBM Plex Mono', monospace;
     font-size: var(--typography-base);
     padding-bottom: var(--gutter);
 }
+
+a:not([href^="#"]) {
+    color: black;
+}
+
+a:not([href^="#"]):hover{
+    color: rgb(1, 1, 213);
+}
+
+a:not([href^="#"]):visited {
+    color: grey;
+ }
+
+ a:not([href^="#"]):visited:hover {
+    color: rgb(1, 1, 213);
+ }

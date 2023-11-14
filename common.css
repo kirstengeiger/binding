@@ -1,3 +1,15 @@
+:root {
+    --typography-base: 1em;
+    
+    --gutter: var(--typography-base);
+}
+
 h1 {
     font-family: var(--font-display);
+    margin-bottom: var(--spacing);
+}
+
+main {
+    margin-left: calc(1.5 * var(--gutter));
+    margin-right: calc(1.5 * var(--gutter));
 }

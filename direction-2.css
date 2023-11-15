@@ -4,7 +4,7 @@
 :root {
     --typography-base: 1rem;
 
-    --typogaphy-h1: calc(4 * var(--typography-base)); /* article title */
+    --typography-h1: calc(4 * var(--typography-base)); /* article title */
     --typography-h2: calc(3 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
     --typography-blockquote: calc(3 * var(--typography-base)); /*blockquote*/
@@ -17,7 +17,7 @@
 .nav {
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
-    background-color: #C4D2D9;
+    background-color: blue;
 }
 
 button {
@@ -26,9 +26,50 @@ button {
     color: black;
 }
 
-article {
+.box {
     padding-top: calc(1.5 * var(--gutter));
     padding-bottom: calc(1.5 * var(--gutter));
     padding-left: calc(2 * var(--gutter));
     padding-right: calc(2 * var(--gutter));
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(2 * var(--typography-base));
+    background-color: #C4D2D9;
+    padding-bottom: var(--typography-h1);
+}
+
+ol {
+    line-height: calc(3.3 * var(--gutter));
+    text-align: center;
+    padding-left: calc(2 * var(--gutter));
+    padding-right: calc(2 * var(--gutter));
+    padding-top: var(--typography-h1);
+    padding-bottom: var(--typography-h1);
+}
+
+li:last-child {
+    font-family: 'Ballet', cursive; 
+    font-size: calc(1.8 * var(--typography-h1));
+}
+
+li:nth-child(1) {
+    text-align: left;
+    text-transform: uppercase;
+    color: white;
+}
+
+li:last-child {
+    text-align: center;
+    color: #FF6351;
+}
+
+/* hr {
+    border-top: 5px dotted black;
+} */
+
+p {
+    font-family: 'Inter', sans-serif;
+    padding-top: var(--gutter);
 }

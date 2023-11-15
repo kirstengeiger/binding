@@ -26,10 +26,15 @@ button {
 h1 {
     font-family: 'Inknut Antiqua', serif;
     font-size: var(--typography-h1);
-    line-height: calc(3 * var(--typography-h1));
+    line-height: calc(2.5 * var(--typography-h1));
 }
 
 ol {
+    align-content: center;
+    text-align: center;
+}
+
+.context {
     align-content: center;
     text-align: center;
 }
@@ -41,7 +46,7 @@ ol {
 }
 
 .box {
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 h2 {

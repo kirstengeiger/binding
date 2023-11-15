@@ -4,7 +4,7 @@
     --typography-h1: calc(7 * var(--typography-base)); /* article title */
     --typography-h2: calc(2.5 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
-    --typography-quote: calc(2 * var(--typography-base)); /*blockquote*/
+    --typography-quote: calc(2.5 * var(--typography-base)); /*blockquote*/
     --typography-a: calc(0.5 * var(--typography-base)); /* nav links */
     --typography-footerp: calc(0.8 *var(var(--typography-base)));
 
@@ -50,7 +50,6 @@ h2 {
     padding-top: calc(1 * var(--gutter));
     padding-bottom: var(--gutter);
     margin-bottom: calc(2 * var(--gutter));
-    max-width: 80vw;
 }
 
 blockquote {
@@ -88,10 +87,6 @@ section {
     padding-right: calc(1.5 * var(--gutter));
 }
 
-h2 {
-    padding-left: var(--gutter);
-}
-
 .quote {
     font-family: 'Chivo', sans-serif;
     padding-top: calc(1 * var(--gutter));
@@ -122,18 +117,12 @@ hr {
 }
 
 a:not([href^="#"]) {
-    color: black;
+    color: #2E7EDD;
+    font-family: 'Chivo', sans-serif;
+    text-transform: uppercase;
 }
 
 a:not([href^="#"]):hover{
     color: rgb(1, 1, 213);
 }
-
-a:not([href^="#"]):visited {
-    color: grey;
- }
-
- a:not([href^="#"]):visited:hover {
-    color: rgb(1, 1, 213);
- }
 

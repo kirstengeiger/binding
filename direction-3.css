@@ -97,6 +97,7 @@ section {
     padding-right: calc(1.5 * var(--gutter));
 }
 
+h3,
 .quote {
     font-family: 'Chivo', sans-serif;
     padding-top: calc(1 * var(--gutter));

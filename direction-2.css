@@ -5,7 +5,7 @@
     --typography-base: 1rem;
 
     --typography-h1: calc(4 * var(--typography-base)); /* article title */
-    --typography-h2: calc(3 * var(--typography-base)); /*chapter title */
+    --typography-h2: calc(2 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
     --typography-blockquote: calc(3 * var(--typography-base)); /*blockquote*/
     --typography-a: calc(0.5 * var(--typography-base)); /* nav links */
@@ -14,62 +14,123 @@
     --gutter: var(--typography-base);
 }
 
+article {
+    background: #FAFAFA;
+}
+
 .nav {
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
-    background-color: blue;
+    background-color: #FF6351;
 }
 
 button {
     font-family: 'Onest', sans-serif;
-    font-size: calc(2 * var(--typography-base));
+    font-size: var(--typography-base);
     color: black;
 }
 
+.context, 
 .box {
     padding-top: calc(1.5 * var(--gutter));
     padding-bottom: calc(1.5 * var(--gutter));
+}
+
+.context {
+    line-height: var(--gutter);
+}
+
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--typography-base);
+    text-transform: uppercase;
+    background-color: #FF6351;
+    padding-top: var(--typography-base);
+    padding-bottom: var(--typography-base);
     padding-left: calc(2 * var(--gutter));
-    padding-right: calc(2 * var(--gutter));
+    margin-top: var(--typography-base);
+    max-width: 80vw;
 }
 
 h1 {
     font-family: 'Inter', sans-serif;
-    font-size: calc(2 * var(--typography-base));
-    background-color: #C4D2D9;
+    background-color: #C0EAFF;
     padding-bottom: var(--typography-h1);
+    padding-top: var(--typography-h1);
 }
 
 ol {
     line-height: calc(3.3 * var(--gutter));
     text-align: center;
+    align-content: center;
     padding-left: calc(2 * var(--gutter));
     padding-right: calc(2 * var(--gutter));
     padding-top: var(--typography-h1);
     padding-bottom: var(--typography-h1);
-}
-
-li:last-child {
-    font-family: 'Ballet', cursive; 
-    font-size: calc(1.8 * var(--typography-h1));
+    color: #FF6351;
 }
 
 li:nth-child(1) {
     text-align: left;
     text-transform: uppercase;
-    color: white;
+    padding-left: 30px;
 }
 
 li:last-child {
+    font-family: 'Ballet', cursive; 
     text-align: center;
-    color: #FF6351;
+    font-size: calc(1.8 * var(--typography-h1));
 }
 
-/* hr {
-    border-top: 5px dotted black;
-} */
+hr {
+    border-top: 5px dotted #FF6351;;
+}
 
 p {
     font-family: 'Inter', sans-serif;
     padding-top: var(--gutter);
+    line-height: calc(2 * var(--typography-base));
+    font-size: var(--typography-base);
+    padding-left: calc(2 * var(--gutter));
+    padding-right: calc(2 * var(--gutter));
+}
+
+blockquote {
+    padding-top: var(--typography-blockquote);
+    padding-left: calc(2 * var(--gutter));
+    padding-right: calc(2 * var(--gutter));
+    padding-bottom: var(--typography-blockquote);
+}
+
+.quote {
+    font-family: 'Crimson Pro', serif;
+    font-size: var(--typography-blockquote);
+    padding-bottom: var(--gutter);
+}
+
+.name {
+    margin-top: 10px;
+}
+
+.swash {
+    font-family: 'Ballet', cursive;
+    font-size: calc(5 * var(--typography-base));
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--typography-h2);
+    padding-top: var(--typography-base);
+    padding-left: calc(2 * var(--gutter));
+    padding-right: calc(2 * var(--gutter));
+    padding-bottom: var(--typography-base);
+    margin-top: calc(2 * var(--typography-h2));
+    margin-bottom: calc(0.5 * var(--typography-h2));
+    background-color: #FF6351;
+}
+
+a {
+    font-family: 'Crimson Pro', serif; 
+    font-size: calc(1.5 * var(--typography-base));
+    font-style: italic;
 }

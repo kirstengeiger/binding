@@ -58,8 +58,4 @@
     padding-left: calc(1.5 * var(--gutter));
 }
 
-h1 {
-    font-family: var(--font-display);
-    margin-bottom: var(--spacing);
-}
 

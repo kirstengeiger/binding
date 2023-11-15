@@ -37,6 +37,10 @@
 /* 'Bricolage Grotesque', sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&display=swap');
 
+/* 'Ballet', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+
+
 :root {
     --typography-base: 1em;
 

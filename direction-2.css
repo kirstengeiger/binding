@@ -14,6 +14,21 @@
     --gutter: var(--typography-base);
 }
 
-q {
+.nav {
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+    background-color: #C4D2D9;
+}
+
+button {
     font-family: 'Onest', sans-serif;
+    font-size: calc(2 * var(--typography-base));
+    color: black;
+}
+
+article {
+    padding-top: calc(1.5 * var(--gutter));
+    padding-bottom: calc(1.5 * var(--gutter));
+    padding-left: calc(2 * var(--gutter));
+    padding-right: calc(2 * var(--gutter));
 }

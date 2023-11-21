@@ -59,7 +59,7 @@
     --typography-base: 1rem;
 
     --typography-h1: calc(10 * var(--typography-base)); /* article title */
-    --typography-h2: calc(3 * var(--typography-base)); /*chapter title */
+    --typography-h2: calc(2 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
     --typography-blockquote: calc(2 * var(--typography-base)); /*blockquote*/
     --typography-a: calc(0.5 * var(--typography-base)); /* nav links */
@@ -69,9 +69,25 @@
     --margin: calc(1.5 * var(--typography-base));
 }
 
+/* Mobile */
+@media (min-width: 375px) {
+    h2 {
+        padding-right: var(--margin);
+        padding-left: var(--margin);
+        padding-top: calc(0.5 * var(--gutter));
+        padding-bottom: calc(0.5 * var(--gutter));
+    }
+
+    p {
+        margin-left: var(--margin);
+        margin-right: var(--margin);
+    }
+
+    
+}
+
 main {
-    margin-left: var(--margin);
-    margin-right: var(--margin);
+    background-color: #F0E6D3;
 }
 
 h1 {
@@ -95,11 +111,22 @@ h1 {
     font-size: calc(1 * var(--typography-h1));
 }
 
+h2 {
+    background-color: #F13028;
+    font-family:'Hanken Grotesk', sans-serif;
+    color: white;
+    font-weight: 800;
+    font-size: var(--typography-h2);
+    text-transform: uppercase;
+    margin-top: calc(2 * var(--typography-h2));
+    margin-bottom: var(--typography-h2);
+}
+
 p {
     font-family: 'Archivo', sans-serif ;
     font-size: var(--typography-base);
     padding-bottom: var(--gutter);
-    line-height: calc(1.7 * var(--typography-base));
+    line-height: calc(1.8 * var(--typography-base));
 }
 
 blockquote > p {

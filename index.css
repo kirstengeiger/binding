@@ -1,22 +1,56 @@
+/* Mobile */
+@media (min-width: 375px) {
+    .index {
+        margin-left: calc(2 * var(--margin));
+        margin-right: calc(2 * var(--margin));
+    }
+    
+    h3 {
+        max-width: 90vw;
+        padding-top: var(--gutter);
+        padding-bottom: var(--gutter);
+        padding-left: calc(2 * var(--gutter));
+        padding-right: var(--gutter); 
+        margin-bottom: calc(2 * var(--gutter));
+    }
+
+    .reading {
+        font-size: var(--typography-h3);
+    }
+
+    .about > p {
+        font-size: var(--typography-base);
+        line-height: calc(1.5 * var(--typography-base));
+    }
+}
+
+@media (min-width: 500px) {
+    .index {
+        display: flex;
+        max-width: 70vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about > p {
+        font-size: var(--typography-base);
+        line-height: calc(1.5 * var(--typography-base));
+    }
+}
+
 .maintitle {
     margin-bottom: var(--typography-h1);
+    color: black;
 }
 
 .reading {
     font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 600;
-    font-size: var(--typography-h2);
     text-transform: uppercase;
 }
 
 h3 {
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    padding-left: calc(2 * var(--gutter));
-    padding-right: var(--gutter); 
-    margin-bottom: calc(2 * var(--gutter));
     text-align: center;
-    max-width: 90vw;
 }
 
 .red, .yellow,
@@ -26,7 +60,7 @@ h3 {
 
 .red {
     background-color: #F13028;
-    rotate: -3deg;
+    rotate: -2deg;
 }
 
 .red:hover {
@@ -38,7 +72,7 @@ h3 {
 
 .yellow {
     background-color: #E59801;
-    rotate: 3deg;
+    rotate: 2deg;
 }
 
 .yellow:hover {
@@ -50,7 +84,7 @@ h3 {
 
 .blue {
     background-color: #0A95FB;
-    rotate: -3deg;
+    rotate: -2deg;
 }
 
 .blue:hover {
@@ -62,8 +96,6 @@ h3 {
 
 .index {
     align-items: center;
-    margin-left: calc(2 * var(--margin));
-    margin-right: calc(2 * var(--margin));
 }
 
 li {

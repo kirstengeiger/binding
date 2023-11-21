@@ -1,5 +1,22 @@
+@media (min-width: 375px) {
+    a:not([href="#"][class="original"]) {
+        font-size: var(--typography-a);
+    }
+}
+
+@media (min-width: 375px) {
+    a:not([href="#"][class="original"]) {
+        font-size: calc(1.2 * var(--typography-a));
+    }
+}
+
 h1 {
     color: #F13028;
+}
+
+article {
+    margin-left: var(--margin);
+    margin-right: var(--margin);
 }
 
 a:not([href="#"][class="original"]) {

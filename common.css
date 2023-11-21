@@ -10,9 +10,6 @@
 /* 'IBM Plex Mono', monospace */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
-/* 'DM Sans', sans-serif */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
-
 /* 'Lora', serif */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 
@@ -44,10 +41,10 @@
     --typography-base: 1rem;
 
     --typography-h1: calc(9.5 * var(--typography-base)); /* article title */
-    --typography-h2: calc(2 * var(--typography-base)); /*chapter title */
-    --typography-h3: calc(3 * var(--typography-base)); /*chapter number*/
-    --typography-blockquote: calc(2 * var(--typography-base)); /*blockquote*/
-    --typography-a: calc(1.5 * var(--typography-base)); /* nav links */
+    --typography-h2: calc(1.8 * var(--typography-base)); /*chapter title */
+    --typography-h3: calc(1.5 * var(--typography-base)); /*chapter number*/
+    --typography-blockquote: calc(1.5 * var(--typography-base)); /*blockquote*/
+    --typography-a: calc(1.2 * var(--typography-base)); /* nav links */
     --typography-footerp: calc(0.8 *var(--typography-base));
 
     --gutter: var(--typography-base);
@@ -64,21 +61,28 @@
         padding-top: var(--margin);
         padding-bottom: var(--margin);
         margin-top: calc(3 * var(--margin));
-        margin-left: var(--margin);
-        margin-right: var(--margin);
         margin-bottom: calc(2* var(--margin));
         border: 2px black;
         border-style: solid;
     }
     
     h2 {
+        font-size: var(--typography-h2);
+        rotate: -3deg;
         padding-right: var(--margin);
         padding-left: var(--margin);
         padding-top: calc(0.5 * var(--gutter));
         padding-bottom: calc(0.5 * var(--gutter));
+        margin-top: calc(2 * var(--typography-h2));
+        margin-bottom: var(--typography-h2);
+        margin-left: calc(-2 * var(--gutter));
+        margin-right: calc(-2 * var(--gutter));
+        max-width: 100vw;
     }
 
     p {
+        font-size: var(--typography-base);
+        line-height: calc(2 * var(--typography-base));
         margin-left: var(--margin);
         margin-right: var(--margin);
     }
@@ -86,18 +90,69 @@
     blockquote {
         max-width: 80vw;
     }
+
+    blockquote > p {
+        font-size: var(--typography-blockquote);
+        line-height: var(--typography-blockquote);
+        padding-top: var(--gutter);
+        padding-left: calc(2 * var(--gutter));
+        padding-right: var(--gutter);
+        margin-top: var(--typography-blockquote);
+        margin-left: calc(-2 * var(--gutter));
+        margin-bottom: var(--typography-blockquote);
+    }
 }
 
+@media (min-width: 500px) {
+    h2 {
+        max-width: 80vw;
+    }
+
+    blockquote {
+        max-width: 70vw;
+    }
+
+    blockquote > p {
+        font-size: calc(1 * var(--typography-blockquote));
+        line-height: calc(1.3 * var(--typography-blockquote));
+    }
+
+    p {
+        font-size: calc(1.1 * var(--typography-base));
+        line-height: calc(1.7 * var(--typography-base));
+    }
+}
+
+@media (min-width: 800px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    article {
+        max-width: 60vw;
+    }
+
+    blockquote {
+        max-width: 45vw;
+    }
+
+}
+
+
+/* entire web page */
 body {
     background-color: #F0E6D3;
 }
 
+/* * button, lead to home */
 .home {
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: var(--typography-h1);
     padding-left: var(--margin);
 }
 
+/* article title */
 h1 {
     font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 900;
@@ -106,10 +161,7 @@ h1 {
     padding-left: var(--margin);
 }
 
-.maintitle > h1 {
-    color: black;
-}
-
+/* styles in article title */
 .times {
     font-family: 'Times New Roman', serif;
     font-weight: 500;
@@ -123,6 +175,7 @@ h1 {
     font-size: calc(1 * var(--typography-h1));
 }
 
+/* author name */
 .author {
     background-color: white;
     color: black;
@@ -137,45 +190,26 @@ h1 {
     line-height: var(--typography-base);
 }
 
-
+/* sub headers */
 h2 {
     font-family:'Hanken Grotesk', sans-serif;
     color: white;
     font-weight: 800;
-    font-size: var(--typography-h2);
     text-transform: uppercase;
-    background-color: #F13028;
-    rotate: -3deg;
-    margin-top: calc(2 * var(--typography-h2));
-    margin-bottom: var(--typography-h2);
-    margin-left: calc(-2 * var(--gutter));
-    margin-right: calc(-2 * var(--gutter));
 }
 
+/* body text */
 p {
     font-family: 'Archivo', sans-serif;
-    font-size: var(--typography-base);
     padding-bottom: var(--gutter);
-    line-height: calc(1.9 * var(--typography-base));
 }
 
+/* quotes with black background */
 blockquote > p {
     font-family: 'IBM Plex Mono', monospace;
     color: white;
-    font-size: var(--typography-blockquote);
     text-transform: uppercase;
     background-color: black;
-    padding-top: var(--gutter);
-    padding-left: calc(2 * var(--gutter));
-    padding-right: var(--gutter);
-    margin-top: var(--typography-blockquote);
-    margin-left: calc(-2 * var(--gutter));
-    margin-bottom: var(--typography-blockquote);
-}
-
-em {
-    font-family: 'Playfair Display SC', serif;
-    font-style: italic;
 }
 
 

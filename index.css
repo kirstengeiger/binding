@@ -13,6 +13,7 @@
 .index {
     align-items: center;
     margin-left: calc(2 * var(--margin));
+    margin-right: calc(2 * var(--margin));
 }
 
 li {

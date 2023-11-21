@@ -63,7 +63,7 @@
     --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
     --typography-blockquote: calc(2 * var(--typography-base)); /*blockquote*/
     --typography-a: calc(1.5 * var(--typography-base)); /* nav links */
-    --typography-footerp: calc(0.8 *var(var(--typography-base)));
+    --typography-footerp: calc(0.8 *var(--typography-base));
 
     --gutter: var(--typography-base);
     --margin: calc(1.5 * var(--typography-base));
@@ -188,11 +188,17 @@ em {
     font-style: italic;
 }
 
-a:not([href^="#" class^="original"]) {
+a:not([href="#"][class="original"]) {
     font-family: 'Crimson Pro', serif;
     font-size: var(--typography-a);
     font-style: italic;
     font-weight: 500;
-    color: #F13028;
 }
+
+a:not([href="#"][class="original"]):hover {
+    text-decoration: underline;
+}
+
+
+
 

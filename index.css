@@ -1,0 +1,22 @@
+.reading {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: var(--typography-h2);
+    text-transform: uppercase;
+}
+
+li {
+    padding-top: var(--typography-h2);
+    padding-bottom: var(--typography-h2);
+}
+
+li:nth-child(1) {
+    background-color: #F13028;
+}
+
+li:nth-child(2) {
+    background-color: #0A95FB;
+}
+
+li:nth-child(3) {
+    background-color: #E59801;
+}

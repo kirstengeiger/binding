@@ -82,8 +82,6 @@
     blockquote {
         max-width: 80vw;
     }
-
-    
 }
 
 body {
@@ -103,6 +101,10 @@ h1 {
     font-size: var(--typography-h1);
     line-height: calc(0.8 * var(--typography-h1));
     padding-left: var(--margin);
+}
+
+.maintitle > h1 {
+    color: black;
 }
 
 .times {
@@ -172,18 +174,6 @@ em {
     font-family: 'Playfair Display SC', serif;
     font-style: italic;
 }
-
-a:not([href="#"][class="original"]) {
-    font-family: 'Crimson Pro', serif;
-    font-size: var(--typography-a);
-    font-style: italic;
-    font-weight: 500;
-}
-
-a:not([href="#"][class="original"]):hover {
-    text-decoration: underline;
-}
-
 
 
 

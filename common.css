@@ -61,7 +61,7 @@
     --typography-h1: calc(10 * var(--typography-base)); /* article title */
     --typography-h2: calc(3 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
-    --typography-blockquote: calc(5 * var(--typography-base)); /*blockquote*/
+    --typography-blockquote: calc(2 * var(--typography-base)); /*blockquote*/
     --typography-a: calc(0.5 * var(--typography-base)); /* nav links */
     --typography-footerp: calc(0.8 *var(var(--typography-base)));
 
@@ -96,9 +96,13 @@ p {
     padding-bottom: var(--gutter);
 }
 
-blockquote {
-    font-family: 'Times New Roman';
+blockquote > p {
+    font-family: 'IBM Plex Mono', monospace;
     font-size: var(--typography-blockquote);
 }
 
+em {
+    font-family: 'Playfair Display SC', serif;
+    font-style: italic;
+}
 

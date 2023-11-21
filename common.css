@@ -66,6 +66,12 @@
     --typography-footerp: calc(0.8 *var(var(--typography-base)));
 
     --gutter: var(--typography-base);
+    --margin: calc(1.5 * var(--typography-base));
+}
+
+main {
+    margin-left: var(--margin);
+    margin-right: var(--margin);
 }
 
 h1 {
@@ -92,13 +98,14 @@ h1 {
 p {
     font-family: 'Archivo', sans-serif ;
     font-size: var(--typography-base);
-    text-transform: uppercase;
     padding-bottom: var(--gutter);
+    line-height: calc(1.7 * var(--typography-base));
 }
 
 blockquote > p {
     font-family: 'IBM Plex Mono', monospace;
     font-size: var(--typography-blockquote);
+    text-transform: uppercase;
 }
 
 em {

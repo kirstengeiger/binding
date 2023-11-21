@@ -62,7 +62,7 @@
     --typography-h2: calc(2 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
     --typography-blockquote: calc(2 * var(--typography-base)); /*blockquote*/
-    --typography-a: calc(1.8 * var(--typography-base)); /* nav links */
+    --typography-a: calc(1.5 * var(--typography-base)); /* nav links */
     --typography-footerp: calc(0.8 *var(var(--typography-base)));
 
     --gutter: var(--typography-base);
@@ -71,6 +71,17 @@
 
 /* Mobile */
 @media (min-width: 375px) {
+    article {
+        padding-top: var(--margin);
+        padding-bottom: var(--margin);
+        margin-top: calc(3 * var(--margin));
+        margin-left: var(--margin);
+        margin-right: var(--margin);
+        margin-bottom: calc(2* var(--margin));
+        border: 2px black;
+        border-style: solid;
+    }
+    
     h2 {
         padding-right: var(--margin);
         padding-left: var(--margin);
@@ -83,11 +94,19 @@
         margin-right: var(--margin);
     }
 
+    blockquote {
+        max-width: 80vw;
+    }
+
     
 }
 
-main {
+body {
     background-color: #F0E6D3;
+}
+
+.top {
+    font-size: var(--typography-h1);
 }
 
 h1 {
@@ -112,21 +131,23 @@ h1 {
 }
 
 h2 {
-    background-color: #F13028;
     font-family:'Hanken Grotesk', sans-serif;
     color: white;
     font-weight: 800;
     font-size: var(--typography-h2);
     text-transform: uppercase;
+    background-color: #F13028;
     margin-top: calc(2 * var(--typography-h2));
     margin-bottom: var(--typography-h2);
+    margin-left: calc(-2 * var(--gutter));
+    margin-right: calc(-2 * var(--gutter));
 }
 
 p {
     font-family: 'Archivo', sans-serif;
     font-size: var(--typography-base);
     padding-bottom: var(--gutter);
-    line-height: calc(1.8 * var(--typography-base));
+    line-height: calc(1.9 * var(--typography-base));
 }
 
 blockquote > p {
@@ -136,9 +157,10 @@ blockquote > p {
     text-transform: uppercase;
     background-color: black;
     padding-top: var(--gutter);
-    padding-left: var(--gutter);
+    padding-left: calc(2 * var(--gutter));
     padding-right: var(--gutter);
     margin-top: var(--typography-blockquote);
+    margin-left: calc(-2 * var(--gutter));
     margin-bottom: var(--typography-blockquote);
 }
 
@@ -151,5 +173,7 @@ a {
     font-family: 'Crimson Pro', serif;
     font-size: var(--typography-a);
     font-style: italic;
+    font-weight: 500;
+    color: #F13028;
 }
 

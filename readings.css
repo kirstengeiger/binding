@@ -1,3 +1,7 @@
+h1 {
+    color: #F13028;
+}
+
 a:not([href="#"][class="original"]) {
     font-family: 'Crimson Pro', serif;
     font-size: var(--typography-a);

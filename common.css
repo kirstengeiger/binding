@@ -45,7 +45,7 @@
 
     --typography-h1: calc(10 * var(--typography-base)); /* article title */
     --typography-h2: calc(2 * var(--typography-base)); /*chapter title */
-    --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
+    --typography-h3: calc(3 * var(--typography-base)); /*chapter number*/
     --typography-blockquote: calc(2 * var(--typography-base)); /*blockquote*/
     --typography-a: calc(1.5 * var(--typography-base)); /* nav links */
     --typography-footerp: calc(0.8 *var(--typography-base));
@@ -56,6 +56,10 @@
 
 /* Mobile */
 @media (min-width: 375px) {
+    main {
+        margin-bottom: calc(2* var(--margin));
+    }
+    
     article {
         padding-top: var(--margin);
         padding-bottom: var(--margin);
@@ -97,7 +101,6 @@ body {
 h1 {
     font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 900;
-    color: #F13028;
     font-size: var(--typography-h1);
     line-height: calc(0.8 * var(--typography-h1));
     padding-left: var(--margin);

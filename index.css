@@ -5,9 +5,59 @@
 .reading {
     font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 600;
-    color: white;
     font-size: var(--typography-h2);
     text-transform: uppercase;
+}
+
+h3 {
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+    padding-left: calc(2 * var(--gutter));
+    padding-right: var(--gutter); 
+    margin-bottom: calc(2 * var(--gutter));
+    text-align: center;
+    max-width: 90vw;
+}
+
+.red, .yellow,
+.blue {
+    color: white;
+}
+
+.red {
+    background-color: #F13028;
+    rotate: -3deg;
+}
+
+.red:hover {
+    background-color: #F0E6D3;
+    color: #F13028;
+    border: 3px #F13028;
+    border-style: solid;
+}
+
+.yellow {
+    background-color: #E59801;
+    rotate: 3deg;
+}
+
+.yellow:hover {
+    background-color: #F0E6D3;
+    color: #E59801;
+    border: 3px #E59801;
+    border-style: solid;
+}
+
+.blue {
+    background-color: #0A95FB;
+    rotate: -3deg;
+}
+
+.blue:hover {
+    background-color: #F0E6D3;
+    color: #0A95FB;
+    border: 3px #0A95FB;
+    border-style: solid;
 }
 
 .index {
@@ -36,29 +86,4 @@ li {
     margin-bottom: calc(2 * var(--margin));
     margin-left: calc(-1 * var(--margin));
     margin-right: calc(-1 * var(--margin));
-}
-
-h3 {
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    padding-left: calc(2 * var(--gutter));
-    padding-right: var(--gutter); 
-    margin-bottom: calc(2 * var(--gutter));
-    text-align: center;
-    max-width: 90vw;
-}
-
-.red {
-    background-color: #F13028;
-    rotate: -3deg;
-}
-
-.yellow {
-    background-color: #E59801;
-    rotate: 3deg;
-}
-
-.blue {
-    background-color: #0A95FB;
-    rotate: -3deg;
 }

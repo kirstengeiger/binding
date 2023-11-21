@@ -43,7 +43,7 @@
 :root {
     --typography-base: 1rem;
 
-    --typography-h1: calc(10 * var(--typography-base)); /* article title */
+    --typography-h1: calc(9.5 * var(--typography-base)); /* article title */
     --typography-h2: calc(2 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(3 * var(--typography-base)); /*chapter number*/
     --typography-blockquote: calc(2 * var(--typography-base)); /*blockquote*/

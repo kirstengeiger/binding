@@ -62,7 +62,7 @@
     --typography-h2: calc(2 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(4 * var(--typography-base)); /*chapter number*/
     --typography-blockquote: calc(2 * var(--typography-base)); /*blockquote*/
-    --typography-a: calc(0.5 * var(--typography-base)); /* nav links */
+    --typography-a: calc(1.8 * var(--typography-base)); /* nav links */
     --typography-footerp: calc(0.8 *var(var(--typography-base)));
 
     --gutter: var(--typography-base);
@@ -123,7 +123,7 @@ h2 {
 }
 
 p {
-    font-family: 'Archivo', sans-serif ;
+    font-family: 'Archivo', sans-serif;
     font-size: var(--typography-base);
     padding-bottom: var(--gutter);
     line-height: calc(1.8 * var(--typography-base));
@@ -131,12 +131,25 @@ p {
 
 blockquote > p {
     font-family: 'IBM Plex Mono', monospace;
+    color: white;
     font-size: var(--typography-blockquote);
     text-transform: uppercase;
+    background-color: black;
+    padding-top: var(--gutter);
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    margin-top: var(--typography-blockquote);
+    margin-bottom: var(--typography-blockquote);
 }
 
 em {
     font-family: 'Playfair Display SC', serif;
+    font-style: italic;
+}
+
+a {
+    font-family: 'Crimson Pro', serif;
+    font-size: var(--typography-a);
     font-style: italic;
 }
 

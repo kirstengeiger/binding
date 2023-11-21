@@ -105,8 +105,10 @@ body {
     background-color: #F0E6D3;
 }
 
-.top {
+.home {
+    font-family: 'Hanken Grotesk', sans-serif;
     font-size: var(--typography-h1);
+    padding-left: var(--margin);
 }
 
 h1 {
@@ -169,7 +171,7 @@ em {
     font-style: italic;
 }
 
-a {
+a:not([href^="#"]) {
     font-family: 'Crimson Pro', serif;
     font-size: var(--typography-a);
     font-style: italic;

@@ -117,6 +117,7 @@ h1 {
     color: #F13028;
     font-size: var(--typography-h1);
     line-height: calc(0.8 * var(--typography-h1));
+    padding-left: var(--margin);
 }
 
 .times {
@@ -132,6 +133,21 @@ h1 {
     font-size: calc(1 * var(--typography-h1));
 }
 
+.author {
+    background-color: white;
+    color: black;
+    padding-top: calc(22 * var(--margin));
+    padding-bottom: var(--margin);
+    padding-left: var(--margin);
+    margin-left: 40vw;
+    margin-top: calc(-28 * var(--gutter));
+}
+
+.author > p {
+    line-height: var(--typography-base);
+}
+
+
 h2 {
     font-family:'Hanken Grotesk', sans-serif;
     color: white;
@@ -139,6 +155,7 @@ h2 {
     font-size: var(--typography-h2);
     text-transform: uppercase;
     background-color: #F13028;
+    rotate: -3deg;
     margin-top: calc(2 * var(--typography-h2));
     margin-bottom: var(--typography-h2);
     margin-left: calc(-2 * var(--gutter));
@@ -171,7 +188,7 @@ em {
     font-style: italic;
 }
 
-a:not([href^="#"]) {
+a:not([href^="#" class^="original"]) {
     font-family: 'Crimson Pro', serif;
     font-size: var(--typography-a);
     font-style: italic;

@@ -1,4 +1,4 @@
-@media (min-width: 375px) {
+/* @media (min-width: 375px) {
     a:not([href="#"][class="original"]) {
         font-size: var(--typography-a);
     }
@@ -24,4 +24,4 @@ a:not([href="#"][class="original"]) {
 
 a:not([href="#"][class="original"]):hover {
     text-decoration: underline;
-}
+} */

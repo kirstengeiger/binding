@@ -41,10 +41,10 @@
     --typography-base: 1rem;
 
     --typography-h1: calc(9.5 * var(--typography-base)); /* article title */
-    --typography-h2: calc(6 * var(--typography-base)); /*chapter title */
+    --typography-h2: calc(2 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(1.5 * var(--typography-base)); /*chapter number*/
-    --typography-blockquote: calc(1.5 * var(--typography-base)); /*blockquote*/
-    --typography-a: calc(1.2 * var(--typography-base)); /* nav links */
+    --typography-blockquote: calc(2.5 * var(--typography-base)); /*blockquote*/
+    --typography-a: calc(1.5 * var(--typography-base)); /* nav links */
     --typography-footerp: calc(0.8 *var(--typography-base));
 
     --gutter: var(--typography-base);
@@ -74,14 +74,28 @@
     h2 {
         font-size: var(--typography-h2);
         line-height: var(--typography-h2);
-        padding-right: var(--margin);
-        /*padding-left: var(--margin);*/
-        padding-top: calc(0.5 * var(--gutter));
-        padding-bottom: calc(0.5 * var(--gutter));
+        max-width: 80vw;
+        padding-top: var(--gutter);
+        padding-bottom: var(--gutter);
+        padding-left: calc(2 * var(--gutter));
+        padding-right: var(--gutter);
         margin-top: var(--typography-h2);
-        margin-bottom: calc(-0.5 * var(--typography-h2));
-        margin-left: var(--gutter);
+        margin-left: calc(-1.5 * var(--gutter));
+        margin-bottom: var(--typography-h2);
+    }
+
+    blockquote {
+        line-height: calc(-0.5 * var(--gutter));
+    }
+
+    blockquote > p {
+        font-size: var(--typography-blockquote);
+        padding-right: var(--margin);
+        padding-top: calc(1 * var(--gutter));
+        padding-bottom: calc(0.5 * var(--gutter));
         margin-right: calc(-2 * var(--gutter));
+        margin-left: var(--gutter);
+        margin-bottom: calc(-2 * var(--typography-blockquote));
     }
 
     p {
@@ -91,19 +105,8 @@
         margin-right: var(--margin);
     }
 
-    blockquote {
-        max-width: 80vw;
-    }
-
-    blockquote > p {
-        font-size: var(--typography-blockquote);
-        line-height: var(--typography-blockquote);
-        padding-top: var(--gutter);
-        padding-left: calc(2 * var(--gutter));
-        padding-right: var(--gutter);
-        margin-top: var(--typography-blockquote);
-        margin-left: calc(-2 * var(--gutter));
-        margin-bottom: var(--typography-blockquote);
+    .embed-link {
+        font-size: var(--typography-a);
     }
 }
 
@@ -138,20 +141,50 @@
     }
 
     blockquote {
-        max-width: 45vw;
+        max-width: 80vw;
     }
+}
 
+body {
+    margin-top: calc(2 * var(--margin));
+}
+
+.nav {
+    margin-left: calc(1.5 * var(--margin));
 }
 
 article {
     background-color: #F0E6D3;
+    margin-top: calc(2 * var(--margin));
+    margin-left: calc(1.5 * var(--margin));
+    margin-right: calc(1.5 * var(--margin));
 }
 
-/* button, lead to home */
-a > .home  {
+/* button, leads to home */
+.home {
     font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 10rem;
-    padding-left: var(--margin);
+    font-size: calc(1.5 * var(--typography-base));
+    background-color: white;
+    padding-top: calc(1 * var(--gutter));
+    padding-bottom: calc(1 * var(--gutter));
+    padding-right: var(--gutter);
+    padding-left: var(--gutter);
+    margin-top: var(--margin);
+}
+
+/*styles in home button*/
+.times-small {
+    font-family: 'Times New Roman', serif;
+    font-size: calc(1.5 * var(--typography-base));
+    font-weight: 500;
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+.play-small {
+    font-family: 'Playfair Display SC', serif;
+    font-size: calc(1.5 * var(--typography-base));
+    font-weight: 400;
 }
 
 /* article title */
@@ -161,6 +194,7 @@ h1 {
     font-size: var(--typography-h1);
     line-height: calc(0.8 * var(--typography-h1));
     padding-left: var(--margin);
+    margin-top: calc(2 * var(--margin));
 }
 
 /* styles in article title */
@@ -192,12 +226,17 @@ h1 {
     line-height: var(--typography-base);
 }
 
+/* link to the original article*/
+.original {
+    text-decoration: underline;
+}
+
 /* sub headers */
 h2 {
-    font-family: 'Crimson Pro', serif;
+    font-family: 'IBM Plex Mono', monospace;
     color: white;
-    font-weight: 800;
-    max-width: 50vw;
+    text-transform: uppercase;
+    background-color: black;
 }
 
 /* body text */
@@ -206,13 +245,25 @@ p {
     padding-bottom: var(--gutter);
 }
 
-/* quotes with black background */
+/* pull quotes */
 blockquote > p {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Lora', serif;
     color: white;
-    text-transform: uppercase;
-    background-color: black;
+    font-weight: 800;
+    margin-left: 10vw;
 }
+
+/* in-article links */
+.embed-link {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.embed-link:hover {
+    text-decoration: underline;
+}
+
 
 
 

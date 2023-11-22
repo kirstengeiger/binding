@@ -5,7 +5,7 @@
 }
 
 @media (min-width: 375px) {
-    a:not([href="#"][class="original"]) {
+    a:not([href="#"][class="original"][class="home"]) {
         font-size: calc(1.2 * var(--typography-a));
     }
 }

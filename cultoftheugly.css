@@ -1,7 +1,14 @@
-h1 {
-    color: #F13028;
+/* entire web page */
+body {
+    background-color: #F13028;
 }
 
+/* main title */
+h1 {
+    color: white;
+}
+
+/* sub headers */
 h2 {
-    background-color: #F13028;
+    color: white;
 }

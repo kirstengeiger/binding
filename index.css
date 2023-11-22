@@ -38,6 +38,12 @@
     }
 }
 
+@media (min-width: 1200px) {
+    .maintitle {
+        max-width: 70vw;
+    }
+}
+
 .maintitle {
     margin-bottom: var(--typography-h1);
     color: black;

@@ -64,7 +64,6 @@
         margin-bottom: calc(2* var(--margin));
         border: 2px black;
         border-style: solid;
-        background-color: #F0E6D3;
     }
 
     .title {
@@ -144,6 +143,10 @@
 
 }
 
+article {
+    background-color: #F0E6D3;
+}
+
 /* button, lead to home */
 a > .home  {
     font-family: 'Hanken Grotesk', sans-serif;
@@ -176,8 +179,8 @@ h1 {
 
 /* author name */
 .author {
-    background-color: black;
     color: white;
+    background-color: black;
     padding-top: calc(22 * var(--margin));
     padding-bottom: var(--margin);
     padding-left: var(--margin);

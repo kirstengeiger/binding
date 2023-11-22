@@ -10,10 +10,6 @@
     }
 }
 
-h1 {
-    color: #F13028;
-}
-
 article {
     margin-left: var(--margin);
     margin-right: var(--margin);

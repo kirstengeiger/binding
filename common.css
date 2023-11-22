@@ -65,6 +65,11 @@
         border: 2px black;
         border-style: solid;
     }
+
+    .title {
+        margin-left: var(--margin);
+        margin-right: var(--margin);
+    }
     
     h2 {
         font-size: var(--typography-h2);

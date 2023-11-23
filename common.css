@@ -43,7 +43,7 @@
     --typography-h1: calc(9.5 * var(--typography-base)); /* article title */
     --typography-h2: calc(2 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(1.5 * var(--typography-base)); /*chapter number*/
-    --typography-blockquote: calc(2.5 * var(--typography-base)); /*blockquote*/
+    --typography-blockquote: calc(1.5 * var(--typography-base)); /*blockquote*/
     --typography-a: calc(1.5 * var(--typography-base)); /* nav links */
     --typography-footerp: calc(0.8 *var(--typography-base));
 
@@ -89,12 +89,21 @@
     }
 
     blockquote > p {
-        font-size: var(--typography-blockquote);
+        
         padding-right: var(--margin);
         padding-top: calc(1 * var(--gutter));
         padding-bottom: calc(0.5 * var(--gutter));
         margin-right: calc(-2 * var(--gutter));
         margin-left: var(--gutter);
+    }
+
+    .black {
+        font-size: var(--typography-blockquote);
+        margin-bottom: var(--typography-blockquote);
+    }
+    
+    .white {
+        color: white;
         margin-bottom: calc(-2 * var(--typography-blockquote));
     }
 
@@ -248,9 +257,16 @@ p {
 /* pull quotes */
 blockquote > p {
     font-family: 'Lora', serif;
-    color: white;
     font-weight: 800;
     margin-left: 10vw;
+}
+
+.black {
+    color: black;
+}
+
+.white {
+    color: white;
 }
 
 /* in-article links */

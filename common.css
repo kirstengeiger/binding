@@ -1,12 +1,3 @@
-/* 'Onest', sans-serif */
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap');
-
-/* 'Chivo', sans-serif */
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap'); 
-
-/* 'Almarai', sans-serif */
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Chivo:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
-
 /* 'IBM Plex Mono', monospace */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
@@ -16,26 +7,14 @@
 /* 'Archivo', sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
 
-/* 'Rubik', sans-serif */
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Rubik:ital,wght@0,400;0,500;1,400&display=swap');
-
 /* 'Crimson Pro', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
-
-/* 'Inter', sans-serif */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
 
 /* 'Hanken Grotesk', sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* 'Arvo', serif; */
-@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
-
 /* 'Playfair Display SC', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
-
-/* 'Arimo', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
     --typography-base: 1rem;
@@ -51,7 +30,7 @@
     --margin: calc(1.5 * var(--typography-base));
 }
 
-/* Mobile */
+/* Mobile*/
 @media (min-width: 375px) {
     main {
         margin-bottom: calc(2* var(--margin));
@@ -154,34 +133,55 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin-top: calc(2 * var(--margin));
 }
 
-.nav {
-    margin-left: calc(1.5 * var(--margin));
+main {
+    display: grid;
 }
 
-article {
-    background-color: #F0E6D3;
-    margin-top: calc(2 * var(--margin));
-    margin-left: calc(1.5 * var(--margin));
-    margin-right: calc(1.5 * var(--margin));
-}
-
-/* button, leads to home */
-.home {
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-size: calc(1.5 * var(--typography-base));
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    justify-content: space-between;
+    padding-top: var(--margin);
+    padding-bottom: var(--margin);
+    padding-left: var(--margin); 
+    padding-right: var(--margin); 
+    margin-bottom: var(--margin);
     background-color: white;
-    padding-top: calc(1 * var(--gutter));
-    padding-bottom: calc(1 * var(--gutter));
-    padding-right: var(--gutter);
-    padding-left: var(--gutter);
-    margin-top: var(--margin);
 }
 
-/*styles in home button*/
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+ul li {
+    display: inline;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+a {
+    color: black;
+}
+
+
+/* styles in home button */
 .times-small {
     font-family: 'Times New Roman', serif;
     font-size: calc(1.5 * var(--typography-base));
@@ -235,9 +235,16 @@ h1 {
     line-height: var(--typography-base);
 }
 
-/* link to the original article*/
+/* link to the original article */
 .original {
     text-decoration: underline;
+}
+
+article {
+    background-color: #F0E6D3;
+    margin-top: calc(2 * var(--margin));
+    margin-left: calc(1.5 * var(--margin));
+    margin-right: calc(1.5 * var(--margin));
 }
 
 /* sub headers */

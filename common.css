@@ -19,6 +19,7 @@
 :root {
     --typography-base: 1rem;
 
+    --typography-nav: calc(1.2 * var(--typography-base));
     --typography-h1: calc(9.5 * var(--typography-base)); /* article title */
     --typography-h2: calc(2 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(1.5 * var(--typography-base)); /*chapter number*/
@@ -28,6 +29,7 @@
 
     --gutter: var(--typography-base);
     --margin: calc(1.5 * var(--typography-base));
+    --nav-space: var(--typography-nav)
 }
 
 /* Mobile*/
@@ -152,12 +154,18 @@ nav {
     left: 0;
     width: 100vw;
     justify-content: space-between;
-    padding-top: var(--margin);
-    padding-bottom: var(--margin);
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
     padding-left: var(--margin); 
     padding-right: var(--margin); 
     margin-bottom: var(--margin);
     background-color: white;
+}
+
+.home {
+    display: inline;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: var(--typography-nav);
 }
 
 ul {
@@ -174,10 +182,16 @@ ul {
 ul li {
     display: inline;
     font-family: 'Hanken Grotesk', sans-serif;
+    font-size: var(--typography-nav);
+    padding-left: var(--nav-space);
 }
 
 a {
     color: black;
+}
+
+ul li:active {
+    color: red;
 }
 
 

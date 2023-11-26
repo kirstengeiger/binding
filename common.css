@@ -143,10 +143,6 @@ body {
     margin-top: calc(2 * var(--margin));
 }
 
-main {
-    display: grid;
-}
-
 nav {
     display: flex;
     position: fixed;
@@ -159,14 +155,29 @@ nav {
     padding-bottom: var(--gutter);
     padding-left: var(--margin); 
     padding-right: var(--margin); 
-    margin-bottom: var(--margin);
     background-color: white;
 }
 
+/* Home button in nav */
 .home {
     display: inline;
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: var(--typography-nav);
+}
+
+/* Styles in home button */
+.times-small {
+    font-family: 'Times New Roman', serif;
+    font-size: calc(1.5 * var(--typography-base));
+    font-weight: 500;
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+.play-small {
+    font-family: 'Playfair Display SC', serif;
+    font-size: calc(1.5 * var(--typography-base));
+    font-weight: 400;
 }
 
 ul {
@@ -206,7 +217,8 @@ ul li:nth-child(3):active {
 .top-button {
     font-family: 'IBM Plex Mono', monospace;
     background: black;
-    text-decoration:none; /* Remove that ugly underlining */
+    /* Referenced code from Stack Overflow */
+    text-decoration:none;
     border-radius: 50%;
     display: block;
     height: 70px;
@@ -215,7 +227,6 @@ ul li:nth-child(3):active {
     font-size: 50px;
     text-align: center;
     align-content: center;
-    content:"\2191";   /* The code for the arrow : see the reference */
     font-weight: 100;
     position: fixed;
     bottom: 20px;
@@ -224,28 +235,13 @@ ul li:nth-child(3):active {
     border-style: solid;
 }
 
-/* styles in home button */
-.times-small {
-    font-family: 'Times New Roman', serif;
-    font-size: calc(1.5 * var(--typography-base));
-    font-weight: 500;
-    text-transform: lowercase;
-    font-style: italic;
-}
-
-.play-small {
-    font-family: 'Playfair Display SC', serif;
-    font-size: calc(1.5 * var(--typography-base));
-    font-weight: 400;
-}
-
 /* article title */
 h1 {
     font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 900;
     font-size: var(--typography-h1);
     line-height: calc(0.8 * var(--typography-h1));
-    padding-left: var(--margin);
+    padding-top: calc(1.5 * var(--margin)); 
     margin-top: calc(2 * var(--margin));
 }
 

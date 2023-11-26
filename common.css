@@ -331,6 +331,22 @@ blockquote > p {
     text-decoration: underline;
 }
 
+/* Footer Style */
+
+footer {
+    display: flex;
+    background: black;
+    align-items: left;
+}
+
+footer p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: var(--typography-footerp);
+    color: white;
+    padding-top: var(--gutter);
+    text-transform: uppercase;
+}
+
 
 
 

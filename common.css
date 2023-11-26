@@ -24,6 +24,7 @@
     --typography-h2: calc(2 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(1.5 * var(--typography-base)); /*chapter number*/
     --typography-blockquote: calc(1.5 * var(--typography-base)); /*blockquote*/
+    --typography-blockquote-white: calc(4 * var(--typography-base)); /*blockquote*/
     --typography-a: calc(1.5 * var(--typography-base)); /* nav links */
     --typography-footerp: calc(0.8 *var(--typography-base));
 
@@ -67,25 +68,26 @@
 
     blockquote {
         line-height: calc(-0.5 * var(--gutter));
+        margin-bottom: calc(2 * var(--typography-blockquote));
     }
 
     blockquote > p {
-        
-        padding-right: var(--margin);
         padding-top: calc(1 * var(--gutter));
         padding-bottom: calc(0.5 * var(--gutter));
         margin-right: calc(-2 * var(--gutter));
-        margin-left: var(--gutter);
     }
 
     .black {
         font-size: var(--typography-blockquote);
-        margin-bottom: var(--typography-blockquote);
+        padding-left: var(--gutter);
+        max-width: 70vw;
     }
     
     .white {
+        font-size: var(--typography-blockquote-white);
         color: white;
-        margin-bottom: calc(-2 * var(--typography-blockquote));
+        margin-bottom: calc(-8 * var(--typography-blockquote));
+        line-height: var(--typography-blockquote-white);
     }
 
     p {
@@ -259,7 +261,7 @@ h1 {
     font-size: calc(1 * var(--typography-h1));
 }
 
-/* author name */
+/* Author's name & publishing date */
 .author {
     color: white;
     background-color: black;
@@ -274,9 +276,10 @@ h1 {
     line-height: var(--typography-base);
 }
 
-/* link to the original article */
+/* Link to the original article */
 .original {
     text-decoration: underline;
+    color: white;
 }
 
 article {
@@ -286,7 +289,7 @@ article {
     margin-right: calc(1.5 * var(--margin));
 }
 
-/* sub headers */
+/* Sub headers in the article */
 h2 {
     font-family: 'IBM Plex Mono', monospace;
     color: white;
@@ -294,17 +297,16 @@ h2 {
     background-color: black;
 }
 
-/* body text */
+/* Body text */
 p {
     font-family: 'Archivo', sans-serif;
     padding-bottom: var(--gutter);
 }
 
-/* pull quotes */
+/* Pull quotes */
 blockquote > p {
     font-family: 'Lora', serif;
     font-weight: 800;
-    margin-left: 10vw;
 }
 
 .black {
@@ -315,7 +317,7 @@ blockquote > p {
     color: white;
 }
 
-/* in-article links */
+/* In-article links */
 .embed-link {
     font-family: 'Crimson Pro', serif;
     font-style: italic;

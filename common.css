@@ -23,7 +23,7 @@
     --typography-h1: calc(9.5 * var(--typography-base)); /* article title */
     --typography-h2: calc(2 * var(--typography-base)); /*chapter title */
     --typography-h3: calc(1.5 * var(--typography-base)); /*chapter number*/
-    --typography-blockquote: calc(1.5 * var(--typography-base)); /*blockquote*/
+    --typography-blockquote: calc(2 * var(--typography-base)); /*blockquote*/
     --typography-blockquote-white: calc(4 * var(--typography-base)); /*blockquote*/
     --typography-a: calc(1.5 * var(--typography-base)); /* nav links */
     --typography-footerp: calc(0.8 *var(--typography-base));
@@ -81,12 +81,13 @@
         font-size: var(--typography-blockquote);
         padding-left: var(--gutter);
         max-width: 70vw;
+        margin-top: calc(-8 * var(--typography-blockquote));
     }
     
     .white {
         font-size: var(--typography-blockquote-white);
+        max-width: 70vw;
         color: white;
-        margin-bottom: calc(-8 * var(--typography-blockquote));
         line-height: var(--typography-blockquote-white);
     }
 
@@ -216,6 +217,7 @@ ul li:nth-child(3):active {
     color: #0A95FB;
 }
 
+/* Arrow in a circle, goes back to the top */
 .top-button {
     font-family: 'IBM Plex Mono', monospace;
     background: black;
@@ -237,7 +239,7 @@ ul li:nth-child(3):active {
     border-style: solid;
 }
 
-/* article title */
+/* Article title */
 h1 {
     font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 900;
@@ -247,7 +249,7 @@ h1 {
     margin-top: calc(2 * var(--margin));
 }
 
-/* styles in article title */
+/* Styles in article title */
 .times {
     font-family: 'Times New Roman', serif;
     font-weight: 500;
@@ -299,9 +301,15 @@ p {
 }
 
 /* Pull quotes */
+blockquote {
+    display: block;
+}
+
 blockquote > p {
     font-family: 'Lora', serif;
     font-weight: 800;
+    -webkit-hyphens: manual; /* Safari uses prefix. */
+	hyphens: manual;
 }
 
 .black {

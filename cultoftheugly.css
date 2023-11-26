@@ -18,6 +18,6 @@ h2 {
     padding-top: calc(22 * var(--margin));
     padding-bottom: var(--margin);
     padding-left: var(--margin);
-    margin-left: 40vw;
+    margin-left: 37vw;
     margin-top: calc(-28 * var(--gutter));
 }

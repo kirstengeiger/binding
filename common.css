@@ -497,7 +497,7 @@ footer p {
     }
 
     article {
-        max-width: 60vw;
+        max-width: 55vw;
         padding-top: calc(2 * var(--margin));
     }
 
@@ -516,10 +516,10 @@ footer p {
         margin-bottom: var(--typography-blockquote);
     }
 
-    p {
+    article p {
         margin-left: calc(2 * var(--margin));
         margin-right: var(--margin);
-        max-width: 50vw;
+        max-width: 40vw;
     }
 }
 

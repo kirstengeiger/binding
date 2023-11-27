@@ -57,6 +57,10 @@ nav {
     font-size: var(--typography-nav);
 }
 
+.home:hover{
+    text-decoration: underline;
+}
+
 /* Letter styles in Nav */
 .times-small {
     font-family: 'Times New Roman', serif;
@@ -93,15 +97,15 @@ a {
     color: black;
 }
 
-.nav-link > :nth-child(1):hover {
+.nav-link-red:hover {
     color: var(--red);
 }
 
-.nav-link > :nth-child(2):hover {
+.nav-link-yellow:hover {
     color: var(--yellow);
 }
 
-.nav-link > :nth-child(3):hover {
+.nav-link-blue:hover {
     color: var(--blue);
 }
 

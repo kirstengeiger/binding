@@ -16,6 +16,7 @@
 /* 'Playfair Display SC', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
 
+/* Colours */
 :root {
     --red: #F13028;
     --yellow: #E59801;
@@ -31,6 +32,7 @@ body {
 }
 
 nav {
+    font-family: var(--typography-nav);
     display: flex;
     position: fixed;
     top: 0;
@@ -43,17 +45,20 @@ nav {
     padding-right: var(--margin); 
 }
 
-/* Home button in nav */
+.nav-link {
+    font-size: var(--typography-nav);
+}
+
+/* Home button in Nav */
 .home {
     display: inline;
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: var(--typography-nav);
 }
 
-/* Styles in home button */
+/* Letter styles in Nav */
 .times-small {
     font-family: 'Times New Roman', serif;
-    font-size: calc(1.5 * var(--typography-base));
     font-weight: 500;
     text-transform: lowercase;
     font-style: italic;
@@ -61,17 +66,21 @@ nav {
 
 .play-small {
     font-family: 'Playfair Display SC', serif;
-    font-size: calc(1.5 * var(--typography-base));
-    font-weight: 400;
+    font-weight: 500;
 }
 
+.times-small,
+.play-small {
+    font-size: calc(1.2 * var(--typography-nav));
+}
+
+/* Nav Bar styling */
 ul {
     display: inline;
     margin: 0;
     padding: 0;
 }
 
-/* Nav Bar styling */
 ul li {
     display: inline;
     font-family: 'Hanken Grotesk', sans-serif;
@@ -83,15 +92,15 @@ a {
     color: black;
 }
 
-ul li:nth-child(1):active {
+ul li:nth-child(1):hover {
     color: var(--red);
 }
 
-ul li:nth-child(2):active {
+ul li:nth-child(2):hover {
     color: var(--yellow);
 }
 
-ul li:nth-child(3):active {
+ul li:nth-child(3):hover {
     color: var(--blue);
 }
 
@@ -117,7 +126,10 @@ ul li:nth-child(3):active {
 /* Article title */
 h1 {
     font-family: 'Hanken Grotesk', sans-serif;
+    font-size: var(--typography-h1);
     font-weight: 900;
+    line-height: var(--typography-h1-line-height);
+    padding-top: var(--margin);
 }
 
 /* Styles in article title */
@@ -136,6 +148,7 @@ h1 {
 
 /* Author's name & publishing date */
 .author {
+    font-size: var(--typography-base);
     color: white;
     background-color: black;
     top: 0;
@@ -143,6 +156,8 @@ h1 {
 
 .author p {
     font-family: 'Hanken Grotesk', sans-serif;
+    font-size: var(--typography-base);
+    line-height: var(--typography-base-line-height);
 }
 
 /* Link to the original article */
@@ -153,11 +168,16 @@ h1 {
 
 article {
     background-color: #F0E6D3;
+    border: 2px black;
+    border-style: solid;
+    padding-top: var(--margin);
 }
 
 /* Sub headers in the article */
 h2 {
     font-family: 'IBM Plex Mono', monospace;
+    font-size: var(--typography-h2);
+    line-height: var(--typography-h2-line-height);
     color: white;
     text-transform: uppercase;
     background-color: black;
@@ -166,11 +186,18 @@ h2 {
 /* Body text */
 article p {
     font-family: 'Archivo', sans-serif;
+    font-size: var(--typography-base);
+    line-height: var(--typography-base-line-height);
+    padding-bottom: var(--margin);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
 }
 
 /* Pull quotes */
 blockquote {
     display: block;
+    margin-top: var(--typography-blockquote);
+    margin-bottom: var(--typography-blockquote);
 }
 
 blockquote > p {
@@ -181,16 +208,21 @@ blockquote > p {
 }
 
 .black {
+    font-size: var(--typography-blockquote);
+    line-height: calc(1 * var(--typography-blockquote));
     color: black;
 }
 
 .white {
+    font-size: var(--typography-blockquote-white);
+    line-height: var(--typography-blockquote-white);
     color: white;
 }
 
 /* In-article links */
 .embed-link {
     font-family: 'Crimson Pro', serif;
+    font-size: var(--typography-a);
     font-style: italic;
     font-weight: 500;
 }
@@ -200,7 +232,6 @@ blockquote > p {
 }
 
 /* Footer Style */
-
 footer {
     display: flex;
     background: black;
@@ -220,33 +251,40 @@ footer p {
 
 /* Mobile*/
 @media (min-width: 350px) {
+    /* Text Styling */
     :root {
         --typography-base: 1rem;
+        --typography-base-line-height: 2rem;
+        /* Nav links */
         --typography-nav: 1.5rem;
-        --typography-h1: 9rem; /* article title */
-        --typography-h2: 1.8rem; /* chapter title */
-        --typography-blockquote: 2rem; /* Blockquote */
-        --typography-blockquote-white: 3rem; /* Blockquote BG*/
-        --typography-a: 1.5rem; /* nav links */
+        /* Article title */
+        --typography-h1: 10rem;
+        --typography-h1-line-height: 7rem;
+        /* Chapter title */
+        --typography-h2: 1.8rem; 
+        --typography-h2-line-height: 2.3rem;
+        /* Blockquote */
+        --typography-blockquote: 2rem; 
+        /* Blockquote BG */
+        --typography-blockquote-white: 3rem;
+        --margin-blockquote: 3rem;
+        /* Embed links */
+        --typography-a: 1.5rem; 
+        /* Footer */
         --typography-footerp: 0.8rem;
 
         --gutter: var(--typography-base);
         --margin: calc(1.5 * var(--typography-base));
         --nav-space: var(--typography-nav);
-        --line-height-p: 1.7rem;
     }
     
     main {
-        margin-bottom: calc(2* var(--margin));
+        margin-bottom: calc(2 * var(--margin));
     }
 
     nav {
         padding-top: 15px;
         padding-bottom: 15px;
-    }
-    
-    nav li {
-        font-size: var(--typography-nav);
     }
 
     .top-button {
@@ -257,27 +295,11 @@ footer p {
 
     h1 {
         font-size: var(--typography-h1);
-        line-height: calc(0.8 * var(--typography-h1));
-        padding-top: calc(1.5 * var(--margin)); 
-        margin-top: calc(2 * var(--margin));
-    }
-
-    .author p {
-        font-size: var(--typography-base);
-        line-height: calc(1.3 * var(--line-height-p));
-    }
-
-    .title {
-        font-size: var(--typography-h1);
         margin-left: var(--margin);
         margin-right: var(--margin);
     }
 
     article {
-        border: 2px black;
-        border-style: solid;
-        padding-top: var(--margin);
-        padding-bottom: var(--margin);
         margin-top: calc(2 * var(--margin));
         margin-bottom: calc(2* var(--margin));
         margin-left: calc(1.5 * var(--margin));
@@ -285,8 +307,6 @@ footer p {
     }
     
     h2 {
-        font-size: var(--typography-h2);
-        line-height: calc(1.2 * var(--typography-h2));
         max-width: 80vw;
         padding-top: var(--gutter);
         padding-bottom: var(--gutter);
@@ -299,29 +319,15 @@ footer p {
 
     blockquote {
         max-width: 80vw;
-        padding-top: var(--typography-blockquote);
-        padding-bottom: var(--typography-blockquote);
     }
 
     .black {
-        font-size: var(--typography-blockquote);
-        line-height: calc(1.2 * var(--typography-blockquote));
         padding-left: var(--gutter);
         margin-top: calc(-8 * var(--typography-blockquote));
     }
     
     .white {
-        font-size: var(--typography-blockquote-white);
-        line-height: var(--typography-blockquote-white);
         margin-bottom: var(--margin);
-    }
-
-    article p {
-        font-size: var(--typography-base);
-        line-height: var(--line-height-p);
-        padding-bottom: var(--margin);
-        margin-left: var(--margin);
-        margin-right: var(--margin);
     }
 
     .embed-link {
@@ -331,51 +337,37 @@ footer p {
 
 @media (min-width: 500px) {
     :root {
-        --gutter: var(--typography-base);
-        --margin: calc(1.5 * var(--typography-base));
-        --nav-space: var(--typography-nav);
-        --p-line-height: calc(1.4 * var(--typography-base));
-    }
-    
-    :root {
-        --typography-base: 1rem;
-        --typography-nav: 1.2rem;
-        --typography-h1: 8rem; /* article title */
-        --typography-h2: 1.8rem; /* chapter title */
-        --typography-blockquote: 1.8rem; /* Blockquote */
-        --typography-blockquote-white: 2.8rem; /* Blockquote BG*/
-        --typography-a: 1.5rem; /* Embed links */
+        --typography-base: 1.1rem;
+        --typography-base-line-height: 1.5rem;
+        /* Nav links */
+        --typography-nav: 1.3rem;
+        /* Article title */
+        --typography-h1: 8rem;
+        --typography-h1-line-height: 7rem;
+        /* Chapter title */
+        --typography-h2: 1.5rem; 
+        --typography-h2-line-height: 2rem;
+        /* Blockquote */
+        --typography-blockquote: 2rem; 
+        /* Blockquote BG */
+        --typography-blockquote-white: 3rem;
+        --margin-blockquote: 3rem;
+        /* Embed links */
+        --typography-a: 1.3rem; 
+        /* Footer */
         --typography-footerp: 0.8rem;
     }
 
     h1 {
         max-width: 80vw;
     }
-
-    .author > p {
-        font-size: var(--typography-base);
-    }
     
     blockquote {
         max-width: 80vw;
     }
 
-    blockquote > p {
-        font-size: calc(1 * var(--typography-blockquote));
-        line-height: calc(1.3 * var(--typography-blockquote));
-    }
-
     .black {
-        font-size: var(--typography-blockquote);
-    }
-
-    .white {
-        font-size: var(--typography-blockquote-white);
-    }
-
-    p {
-        font-size: calc(1.1 * var(--typography-base));
-        line-height: var(--typography-base);
+        margin-top: -15rem;
     }
 }
 
@@ -384,26 +376,36 @@ footer p {
         max-width: 70vw;
     }
 
-    article {
+    h2 {
         max-width: 80vw;
+    }
+
+    article p {
+        max-width: 70vw;
     }
 }
 
 @media (min-width: 640px) {
     :root {
         --typography-base: 1.1rem;
-        --typography-nav: 1.2rem;
-        --typography-h1: 9rem; /* article title */
-        --typography-h2: 1.8rem; /* chapter title */
-        --typography-blockquote: 1.8rem; /* Blockquote */
-        --typography-blockquote-white: 2.8rem; /* Blockquote BG*/
-        --typography-a: 1.3rem; /* Embed links */
-        --typography-footerp: 0.8rem;
-
-        --gutter: var(--typography-base);
-        --margin: calc(1.5 * var(--typography-base));
-        --nav-space: var(--typography-nav);
-        --p-line-height: calc(1.4 * var(--typography-base));
+        --typography-base-line-height: 1.5rem;
+        /* Nav links */
+        --typography-nav: 1.3rem;
+        /* Article title */
+        --typography-h1: 8rem;
+        --typography-h1-line-height: 7rem;
+        /* Chapter title */
+        --typography-h2: 1.5rem; 
+        --typography-h2-line-height: 2rem;
+        /* Blockquote */
+        --typography-blockquote: 2rem; 
+        /* Blockquote BG */
+        --typography-blockquote-white: 3rem;
+        --margin-blockquote: 3rem;
+        /* Embed links */
+        --typography-a: 1.3rem; 
+        /* Footer */
+        --typography-footerp: 0.9rem;
     }
     
     body {
@@ -421,23 +423,21 @@ footer p {
     }
 
     h2 {
-        max-width: 65vw;
+        max-width: 40vw;
     }
 
     blockquote {
         max-width: 60vw;
     }
-
-    .embed-link {
-        font-size: var(--typography-a);
-    }
-
-    p {
-        font-size: var(--typography-base);
-    }
 }
 
 @media (min-width: 800px) {
+   :root {
+    --typography-h1: 9rem;
+    --typography-h1-line-height: 7rem;
+    /* Chapter title */
+   }
+   
     p {
         max-width: 60vw;
     }
@@ -445,19 +445,29 @@ footer p {
 
 @media (min-width: 960px) {
     :root {
-        --typography-base: 1.2rem;
+        --typography-base: 1.3rem;
+        --typography-base-line-height: 1.8rem;
+        /* Nav links */
         --typography-nav: 1.3rem;
-        --typography-h1: 10rem; /* article title */
-        --typography-h2: 1.8rem; /* chapter title */
-        --typography-blockquote: 1.8rem; /* Blockquote */
-        --typography-blockquote-white: 2.8rem; /* Blockquote BG*/
-        --typography-a: 1.3rem; /* Embed links */
-        --typography-footerp: 0.8rem;
+        /* Article title */
+        --typography-h1: 10rem;
+        --typography-h1-line-height: 7rem;
+        /* Chapter title */
+        --typography-h2: 1.8rem; 
+        --typography-h2-line-height: 2.3rem;
+        /* Blockquote */
+        --typography-blockquote: 2rem; 
+        /* Blockquote BG */
+        --typography-blockquote-white: 3rem;
+        --margin-blockquote: 3rem;
+        /* Embed links */
+        --typography-a: 1.3rem; 
+        /* Footer */
+        --typography-footerp: 0.9rem;
+    }
 
-        --gutter: var(--typography-base);
-        --margin: calc(1.5 * var(--typography-base));
-        --nav-space: var(--typography-nav);
-        --p-line-height: calc(1.4 * var(--typography-base));
+    h1 {
+        max-width: 80vw;
     }
 }
 
@@ -498,21 +508,15 @@ footer p {
     }
 
     .black {
-        font-size: var(--typography-blockquote);
-        line-height: calc(1.2 * var(--typography-blockquote));
         padding-left: var(--gutter);
         margin-top: calc(-8 * var(--typography-blockquote));
     }
     
     .white {
-        font-size: var(--typography-blockquote-white);
-        line-height: var(--typography-blockquote-white);
         margin-bottom: var(--typography-blockquote);
     }
 
     p {
-        font-size: var(--typography-base);
-        line-height: var(--p-line-height);
         margin-left: calc(2 * var(--margin));
         margin-right: var(--margin);
         max-width: 50vw;

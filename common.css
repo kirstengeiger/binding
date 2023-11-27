@@ -93,15 +93,15 @@ a {
     color: black;
 }
 
-ul li:nth-child(1):hover {
+.nav-link > :nth-child(1):hover {
     color: var(--red);
 }
 
-ul li:nth-child(2):hover {
+.nav-link > :nth-child(2):hover {
     color: var(--yellow);
 }
 
-ul li:nth-child(3):hover {
+.nav-link > :nth-child(3):hover {
     color: var(--blue);
 }
 
@@ -132,6 +132,8 @@ h1 {
     color: white;
     line-height: var(--typography-h1-line-height);
     padding-top: var(--margin);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
 }
 
 /* Styles in article title */
@@ -164,8 +166,11 @@ h1 {
 
 /* Link to the original article */
 .original {
-    text-decoration: underline;
     color: white;
+}
+
+.original:hover {
+    text-decoration: underline;
 }
 
 article {
@@ -190,14 +195,15 @@ article p {
     font-family: 'Archivo', sans-serif;
     font-size: var(--typography-base);
     line-height: var(--typography-base-line-height);
-    padding-bottom: var(--margin);
+    padding-bottom: var(--typography-base);
     margin-left: var(--margin);
     margin-right: var(--margin);
 }
 
 /* Pull quotes */
 blockquote {
-    top: 0;
+    margin-top: var(--typography-margin);
+    margin-bottom: var(--typography-margin);
 }
 
 blockquote > p {
@@ -211,6 +217,8 @@ blockquote > p {
     font-size: var(--typography-blockquote);
     line-height: calc(1 * var(--typography-blockquote));
     color: black;
+    padding-left: var(--gutter);
+    margin-top: -13rem;
 }
 
 .white {
@@ -257,9 +265,6 @@ footer p {
         --typography-base-line-height: 2rem;
         /* Nav links */
         --typography-nav: 1.5rem;
-        /* Article title */
-        --typography-h1: 8rem;
-        --typography-h1-line-height: 7rem;
         /* Chapter title */
         --typography-h2: 1.8rem; 
         --typography-h2-line-height: 2.3rem;
@@ -295,8 +300,6 @@ footer p {
 
     h1 {
         font-size: var(--typography-h1);
-        margin-left: var(--margin);
-        margin-right: var(--margin);
     }
 
     article {
@@ -322,15 +325,6 @@ footer p {
         padding-bottom: 1.5rem;
     }
 
-    .black {
-        padding-left: var(--gutter);
-        margin-top: -20rem;
-    }
-    
-    .white {
-        margin-bottom: var(--margin);
-    }
-
     .embed-link {
         font-size: var(--typography-a);
     }
@@ -338,13 +332,10 @@ footer p {
 
 @media (min-width: 500px) {
     :root {
-        --typography-base: 1.1rem;
+        --typography-base: 1rem;
         --typography-base-line-height: 1.5rem;
         /* Nav links */
         --typography-nav: 1.3rem;
-        /* Article title */
-        --typography-h1: 8rem;
-        --typography-h1-line-height: 7rem;
         /* Chapter title */
         --typography-h2: 1.5rem; 
         --typography-h2-line-height: 2rem;
@@ -358,10 +349,6 @@ footer p {
         /* Footer */
         --typography-footerp: 0.8rem;
     }
-
-    h1 {
-        max-width: 80vw;
-    }
     
     blockquote {
         max-width: 80vw;
@@ -374,15 +361,9 @@ footer p {
 }
 
 @media (min-width: 580px) {
-    h1 {
-        max-width: 70vw;
-    }
-
     h2 {
         max-width: 80vw;
     }
-
-    
 
     article p {
         max-width: 70vw;
@@ -391,13 +372,10 @@ footer p {
 
 @media (min-width: 640px) {
     :root {
-        --typography-base: 1.1rem;
-        --typography-base-line-height: 1.5rem;
+        --typography-base: 1rem;
+        --typography-base-line-height: 1.3rem;
         /* Nav links */
         --typography-nav: 1.3rem;
-        /* Article title */
-        --typography-h1: 8rem;
-        --typography-h1-line-height: 7rem;
         /* Chapter title */
         --typography-h2: 1.5rem; 
         --typography-h2-line-height: 2rem;
@@ -407,7 +385,7 @@ footer p {
         --typography-blockquote-white: 3rem;
         --margin-blockquote: 3rem;
         /* Embed links */
-        --typography-a: 1.3rem; 
+        --typography-a: 1.2rem; 
         /* Footer */
         --typography-footerp: 0.9rem;
     }
@@ -417,9 +395,7 @@ footer p {
     }
 
     h1 {
-        line-height: calc(0.9 * var(--typography-h1));
         padding-top: calc(1 * var(--margin)); 
-        max-width: 80vw;
     }
 
     article {
@@ -427,7 +403,11 @@ footer p {
     }
 
     h2 {
-        max-width: 40vw;
+        max-width: 65vw;
+    }
+
+    article p {
+        max-width: 80vw;
     }
 
     blockquote {
@@ -435,15 +415,18 @@ footer p {
     }
 }
 
-@media (min-width: 800px) {
-   :root {
-    --typography-h1: 9rem;
-    --typography-h1-line-height: 7rem;
-    /* Chapter title */
-   }
-   
-    p {
-        max-width: 60vw;
+@media (min-width: 800px) {   
+    article {
+        padding-bottom: var(--margin);
+    }
+    article p {
+        max-width: 55vw;
+        margin-left: calc(1.5 * var(--margin));
+        margin-right: calc(1.5 * var(--margin));
+    }
+
+    article p:nth-child(1){
+        padding-top: calc(0.5 * var(--margin));
     }
 }
 
@@ -453,9 +436,6 @@ footer p {
         --typography-base-line-height: 1.8rem;
         /* Nav links */
         --typography-nav: 1.3rem;
-        /* Article title */
-        --typography-h1: 10rem;
-        --typography-h1-line-height: 7rem;
         /* Chapter title */
         --typography-h2: 1.8rem; 
         --typography-h2-line-height: 2.3rem;
@@ -469,41 +449,36 @@ footer p {
         /* Footer */
         --typography-footerp: 0.9rem;
     }
-
-    h1 {
-        max-width: 80vw;
-    }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
     :root {
         --typography-base: 1.2rem;
+        --typography-base-line-height: 1.5rem;
+        /* Nav links */
         --typography-nav: 1.5rem;
-        --typography-h1: 10rem; /* article title */
-        --typography-h2: 2rem; /* chapter title */
-        --typography-blockquote: 2.5rem; /* Blockquote */
-        --typography-blockquote-white: 3.5rem; /* Blockquote BG*/
-        --typography-a: 1.5rem; /* Embed links */
-        --typography-footerp: 1rem;
-
-        --gutter: var(--typography-base);
-        --margin: calc(1.5 * var(--typography-base));
-        --nav-space: var(--typography-nav);
-        --p-line-height: calc(1.4 * var(--typography-base));
-    }
-
-    h1 {
-        max-width: 100vw;
-    }
-
-    h2 {
-        max-width: 50vw;
+        /* Chapter title */
+        --typography-h2: 2rem; 
+        --typography-h2-line-height: 2.3rem;
+        /* Blockquote */
+        --typography-blockquote: 2.5rem; 
+        /* Blockquote BG */
+        --typography-blockquote-white: 3.5rem;
+        --margin-blockquote: 3rem;
+        /* Embed links */
+        --typography-a: 1.3rem; 
+        /* Footer */
+        --typography-footerp: 0.9rem;
     }
 
     article {
-        max-width: 55vw;
+        max-width: 50vw;
         padding-top: calc(2 * var(--margin));
         padding-bottom: calc(1 * var(--margin));
+    }
+
+    h2 {
+        max-width: 40vw;
     }
 
     blockquote {
@@ -518,8 +493,9 @@ footer p {
 
     article p {
         margin-left: calc(2 * var(--margin));
-        margin-right: var(--margin);
+        margin-right: calc(2 * var(--margin));
         max-width: 40vw;
+        justify-content: center;
     }
 }
 

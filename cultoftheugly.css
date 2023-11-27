@@ -17,10 +17,15 @@ h2 {
 @media (min-width: 375px) {
     /* Author's name & publishing date */
     .author {
-        padding-top: calc(22 * var(--margin));
+        padding-top: calc(21 * var(--margin));
         padding-bottom: var(--margin);
-        padding-left: var(--margin);
+        /*padding-left: var(--margin);*/
         margin-left: 37vw;
         margin-top: calc(-28 * var(--gutter));
     }
 }
+
+@media (min-width: 500px) {
+
+}
+

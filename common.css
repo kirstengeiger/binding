@@ -333,7 +333,7 @@ footer p {
 @media (min-width: 500px) {
     :root {
         --typography-base: 1rem;
-        --typography-base-line-height: 1.5rem;
+        --typography-base-line-height: 1.3rem;
         /* Nav links */
         --typography-nav: 1.3rem;
         /* Chapter title */

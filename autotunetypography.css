@@ -13,7 +13,7 @@ body {
 
     /* Author's name & publishing date */
     .author {
-        padding-top: calc(12 * var(--margin));
+        padding-top: calc(8 * var(--margin));
         padding-bottom: var(--margin);
         padding-left: var(--margin);
         margin-top: calc(-15 * var(--gutter));
@@ -29,7 +29,7 @@ body {
     }
 
     .author {
-        padding-top: calc(7 * var(--margin));
+        padding-top: calc(8 * var(--margin));
         padding-left: calc(1.3 * var(--margin));
         margin-top: calc(-9 * var(--gutter));
     }

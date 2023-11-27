@@ -19,7 +19,7 @@ h2 {
     .author {
         padding-top: calc(21 * var(--margin));
         padding-bottom: var(--margin);
-        padding-left: calc(0.5 * var(--margin));
+        padding-left: calc(1.5 * var(--margin));
         margin-left: 35vw;
         margin-top: calc(-28 * var(--gutter));
     }

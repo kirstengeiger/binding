@@ -2,6 +2,22 @@ body {
     background-color: black;
 }
 
+a {
+    color: black;
+}
+
+.nav-link-red:hover {
+    color: var(--red);
+}
+
+.nav-link-yellow:hover {
+    color: var(--yellow);
+}
+
+.nav-link-blue:hover {
+    color: var(--blue);
+}
+
 /* Mobile */
 @media (min-width: 375px) {
     :root {

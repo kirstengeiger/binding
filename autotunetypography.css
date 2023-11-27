@@ -3,6 +3,14 @@ body {
     background-color: #E59801;
 }
 
+.home {
+    color: black;
+}
+
+.nav-link-yellow {
+    color: var(--yellow);
+}
+
 /* Mobile*/
 @media (min-width: 350px) {
     :root {

@@ -1,6 +1,10 @@
 /* entire web page */
 body {
-    background-color: #0A95FB;
+    background-color: var(--blue);
+}
+
+.nav-link-blue {
+    color: var(--blue);
 }
 
 /* Mobile*/

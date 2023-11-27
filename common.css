@@ -79,6 +79,13 @@ nav {
     font-size: calc(1.2 * var(--typography-nav));
 }
 
+/*h4 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: calc(0.8 * var(--typography-nav));
+    text-transform: uppercase;
+    align-content: center;
+}/*
+
 /* Nav Bar styling */
 ul {
     display: inline;
@@ -93,10 +100,7 @@ ul li {
     padding-left: var(--nav-space);
 }
 
-a {
-    color: black;
-}
-
+/* Links to Article */
 .nav-link-red:hover {
     color: var(--red);
 }
@@ -107,6 +111,12 @@ a {
 
 .nav-link-blue:hover {
     color: var(--blue);
+}
+
+.nav-link-red:hover,
+.nav-link-yellow:hover,
+.nav-link-blue:hover {
+    text-decoration: underline;
 }
 
 /* Arrow in a circle, goes back to the top */

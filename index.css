@@ -1,5 +1,24 @@
+body {
+    background-color: black;
+}
+
 /* Mobile */
 @media (min-width: 375px) {
+    :root {
+        /* Article title */
+        --typography-h1: 8rem;
+        --typography-h1-line-height: 7rem;
+    }
+    
+    /* Author's name & publishing date */
+    .author {
+        padding-top: calc(21 * var(--margin));
+        padding-bottom: var(--margin);
+        padding-left: calc(1.5 * var(--margin));
+        margin-left: 35vw;
+        margin-top: calc(-28 * var(--gutter));
+    }
+    
     .index {
         margin-left: calc(2 * var(--margin));
         margin-right: calc(2 * var(--margin));

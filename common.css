@@ -195,9 +195,7 @@ article p {
 
 /* Pull quotes */
 blockquote {
-    display: block;
-    margin-top: var(--typography-blockquote);
-    margin-bottom: var(--typography-blockquote);
+    top: 0;
 }
 
 blockquote > p {
@@ -319,11 +317,12 @@ footer p {
 
     blockquote {
         max-width: 80vw;
+        padding-bottom: 1.5rem;
     }
 
     .black {
         padding-left: var(--gutter);
-        margin-top: calc(-8 * var(--typography-blockquote));
+        margin-top: -20rem;
     }
     
     .white {
@@ -364,10 +363,11 @@ footer p {
     
     blockquote {
         max-width: 80vw;
+        padding-bottom: 1.5rem;
     }
-
-    .black {
-        margin-top: -15rem;
+    
+    .white {
+        margin-bottom: var(--margin);
     }
 }
 
@@ -379,6 +379,8 @@ footer p {
     h2 {
         max-width: 80vw;
     }
+
+    
 
     article p {
         max-width: 70vw;
@@ -478,9 +480,9 @@ footer p {
         --typography-h1: 10rem; /* article title */
         --typography-h2: 2rem; /* chapter title */
         --typography-blockquote: 2.5rem; /* Blockquote */
-        --typography-blockquote-white: 3.7rem; /* Blockquote BG*/
-        --typography-a: 1.3rem; /* Embed links */
-        --typography-footerp: 0.8rem;
+        --typography-blockquote-white: 3.5rem; /* Blockquote BG*/
+        --typography-a: 1.5rem; /* Embed links */
+        --typography-footerp: 1rem;
 
         --gutter: var(--typography-base);
         --margin: calc(1.5 * var(--typography-base));
@@ -499,21 +501,17 @@ footer p {
     article {
         max-width: 55vw;
         padding-top: calc(2 * var(--margin));
+        padding-bottom: calc(1 * var(--margin));
     }
 
     blockquote {
         max-width: 50vw;
-        margin-top: var(--typography-blockquote);
-        margin-bottom: calc(2 * var(--typography-blockquote));
+        padding-bottom: 1.5rem;
     }
 
     .black {
         padding-left: var(--gutter);
-        margin-top: calc(-8 * var(--typography-blockquote));
-    }
-    
-    .white {
-        margin-bottom: var(--typography-blockquote);
+        margin-top: -15rem;
     }
 
     article p {

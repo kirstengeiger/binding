@@ -3,12 +3,52 @@ body {
     background-color: #E59801;
 }
 
-/* main title */
-h1 {
-    color: white;
+/* Mobile*/
+@media (min-width: 350px) {
+    /* Author's name & publishing date */
+    .author {
+        padding-top: calc(10 * var(--margin));
+        padding-bottom: var(--margin);
+        padding-left: calc(1.5 * var(--margin));
+        margin-top: calc(-12 * var(--gutter));
+        max-width: 80vw;
+    }
 }
 
-/* sub headers */
-h2 {
-    color: white;
+@media (min-width: 500px) {
+    .author {
+        /*padding-top: calc(20 * var(--margin));*/
+        padding-left: calc(1.3 * var(--margin));
+    }
+}
+
+@media (min-width: 640px) {
+    /* Author's name & publishing date */
+    .author {
+        /*padding-top: calc(21 * var(--margin));*/
+        padding-bottom: var(--margin);
+        padding-left: calc(1 * var(--margin));
+        margin-left: 35vw;
+        margin-top: calc(-28 * var(--gutter));
+    }
+}
+
+@media (min-width: 960px) {
+    /* Author's name & publishing date */
+    .author {
+        /*padding-top: calc(21 * var(--margin));*/
+        padding-left: calc(1.2 * var(--margin));
+        margin-left: 35vw;
+        margin-top: calc(-28 * var(--gutter));
+    }
+}
+
+@media (min-width: 1000px) {
+    /* Author's name & publishing date */
+    .author {
+        /*padding-top: calc(21 * var(--margin));*/
+        padding-left: calc(1 * var(--margin));
+        margin-left: 50vw;
+        margin-top: calc(-28 * var(--gutter));
+    }
 }

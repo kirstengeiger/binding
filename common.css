@@ -41,6 +41,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    padding-top: var(--margin);
     padding-left: var(--margin); 
     padding-right: var(--margin); 
 }
@@ -128,6 +129,7 @@ h1 {
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: var(--typography-h1);
     font-weight: 900;
+    color: white;
     line-height: var(--typography-h1-line-height);
     padding-top: var(--margin);
 }
@@ -157,7 +159,7 @@ h1 {
 .author p {
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: var(--typography-base);
-    line-height: var(--typography-base-line-height);
+    padding-bottom: calc(0.3 * var(--typography-base));
 }
 
 /* Link to the original article */
@@ -256,7 +258,7 @@ footer p {
         /* Nav links */
         --typography-nav: 1.5rem;
         /* Article title */
-        --typography-h1: 10rem;
+        --typography-h1: 8rem;
         --typography-h1-line-height: 7rem;
         /* Chapter title */
         --typography-h2: 1.8rem; 
@@ -475,8 +477,8 @@ footer p {
 
 @media (min-width: 1000px) {
     :root {
-        --typography-base: 1.3rem;
-        --typography-nav: 1.7rem;
+        --typography-base: 1.2rem;
+        --typography-nav: 1.5rem;
         --typography-h1: 10rem; /* article title */
         --typography-h2: 2rem; /* chapter title */
         --typography-blockquote: 2.5rem; /* Blockquote */

@@ -3,29 +3,40 @@ body {
     background-color: var(--blue);
 }
 
+h1 {
+    padding-top: var(--margin);
+    margin-top: var(--h1-margin);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+}
+
 .nav-link-blue {
     color: var(--blue);
+}
+
+.author {
+    padding-top: var(--author-padding-top);
+    padding-bottom: var(--author-padding-bottom);
+    margin-top: var(--author-margin-top);
 }
 
 /* Mobile*/
 @media (min-width: 350px) {
     :root {
         /* Article title */
-        --typography-h1: 5.5rem;
+        --typography-h1: 6rem;
         --typography-h1-line-height: 5rem;
-    }
 
-    h1 {
-        margin-top: 4rem;
+        --author-padding-top: 32rem;
+        --author-padding-bottom: 2rem;
+        --author-margin-top: -30rem;
+
+        --h1-margin: 4rem;
     }
 
     /* Author's name & publishing date */
     .author {
-        padding-top: 23rem;
-        padding-bottom: var(--margin);
         padding-left: var(--margin);
-        margin-top: -20rem;
-        margin-left: 7vw;
         max-width: 60vw;
     }
 }

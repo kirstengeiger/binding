@@ -3,8 +3,19 @@ body {
     background-color: #E59801;
 }
 
+h1 {
+    padding-top: var(--h1-margin-top);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+}
+
 .home {
     color: black;
+}
+
+.author {
+    padding-left: var(--margin);
+    padding-bottom: calc(2 * var(--margin));
 }
 
 .nav-link-yellow {
@@ -16,15 +27,14 @@ body {
     :root {
         /* Article title */
         --typography-h1: 5rem;
-        --typography-h1-line-height: 7rem;
+        --typography-h1-line-height: 4rem;
+        --h1-margin-top: 3rem;
     }
 
     /* Author's name & publishing date */
     .author {
-        padding-top: calc(8 * var(--margin));
-        padding-bottom: var(--margin);
-        padding-left: var(--margin);
-        margin-top: calc(-15 * var(--gutter));
+        padding-top: calc(10 * var(--margin));
+        margin-top: calc(-12 * var(--gutter));
         max-width: 80vw;
     }
 }

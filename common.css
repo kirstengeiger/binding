@@ -43,7 +43,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    
+
     padding-top: var(--nav-padding);
     padding-bottom: var(--nav-padding);
     padding-left: var(--margin); 
@@ -246,6 +246,7 @@ article p:nth-child(1){
 blockquote {
     margin-top: var(--typography-margin);
     margin-bottom: var(--typography-margin);
+    z-index: -1;
 
 }
 

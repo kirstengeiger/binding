@@ -63,10 +63,6 @@ body {
     article {
         margin-left: 30vw;
     }
-
-    h2 {
-        max-width: 60vw;
-    }
 }
 
 @media (min-width: 800px) {   
@@ -77,7 +73,7 @@ body {
    } 
 
     article {
-        margin-left: 20vw;
+        margin-left: 13vw;
     }
 }
 
@@ -94,7 +90,7 @@ body {
     }
 
     article {
-        margin-left: 20vw;
+        margin-left: 15vw;
     }
 }
 
@@ -116,9 +112,5 @@ body {
 
     article {
         margin-left: 30vw;
-    }
-
-    h2 {
-        max-width: 40vw;
     }
 }

@@ -54,10 +54,6 @@ body {
     article {
         margin-left: 30vw;
     }
-
-    h2 {
-        max-width: 60vw;
-    }
 }
 
 @media (min-width: 800px) {   
@@ -111,10 +107,6 @@ body {
     }
 
     article {
-        margin-left: 50vw;
-    }
-
-    h2 {
-        max-width: 40vw;
+        margin-left: 30vw;
     }
 }

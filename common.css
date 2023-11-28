@@ -132,8 +132,6 @@ ul li {
     align-content: center;
     font-weight: 100;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
     border: 2px white;
     border-style: solid;
 }
@@ -222,11 +220,10 @@ h2 {
 
     padding-top: var(--h2-padding);
     padding-bottom: var(--h2-padding);
-    padding-left: calc(2 * var(--h2-padding));
+    padding-left: calc(2.5 * var(--h2-padding));
     padding-right: var(--h2-padding);
 
     margin-top: var(--typography-h2);
-    margin-left: calc(-1.5 * var(--gutter));
     margin-bottom: var(--typography-h2);
 }
 
@@ -290,9 +287,10 @@ footer {
     background: black;
     align-items: left;
 
+    padding-left: var(--margin);
     padding-top: var(--margin);
     padding-bottom: var(--margin);
-    padding-right: var(--gutter);
+    padding-right: var(--margin);
 }
 
 footer p {
@@ -302,13 +300,12 @@ footer p {
     text-transform: uppercase;
     
     padding-right: var(--footer-p-padding);
-    margin-left: var(--margin);
 }
 
 /* Mobile*/
 @media (min-width: 350px) {
     :root {
-        /* P Text Styling */
+        /* P Styling */
         --typography-base: 1rem;
         --typography-base-line-height: 1.3rem;
 
@@ -317,9 +314,13 @@ footer p {
         
         /* Nav links */
         --typography-nav: 1.2rem;
-        --nav-padding: 15px;
+        --nav-padding: 13px;
+        --nav-space: var(--typography-nav);
+
+        /* Article Title */
+        --h1-margin-top: 3rem;
        
-        /* Chapter title */
+        /* Subheaders */
         --typography-h2: 1.3rem; 
         --h2-line-height: 1.8rem;
 
@@ -337,28 +338,30 @@ footer p {
         --margin-blockquote: 2.5rem;
        
         /* Embed links */
-        --typography-a: 1.5rem; 
+        --typography-a: 1.2rem; 
         
         /* Footer */
         --typography-footerp: 0.7rem;
 
-        --footer-p-padding: 0.3rem;
+        --footer-p-padding: 1rem;
 
          /* Spacing */
-        --gutter: 10px;
+        --gutter: 1rem;
         --margin: 1rem;
-        --nav-space: var(--typography-nav);
-        --h1-margin-top: 3rem;
     }
 
     .top-button {
         height: 50px;
         width: 50px;
         font-size: 2rem;
+
+        bottom: 20px;
+        right: 20px;
     }
     
     h2 {
         max-width: 80vw;
+        margin-left: calc(-1.5 * var(--gutter));
     }
 
     blockquote {
@@ -368,77 +371,11 @@ footer p {
 
 @media (min-width: 500px) {
     :root {
-        /* Article */
-        --typography-base: 1rem;
-        --typography-base-line-height: 1.3rem;
-
-        --base-padding: 1.5rem;
+        /* P Styling */
         --base-margin: 2rem;
         
-        /* Nav links */
-        --typography-nav: 1.3rem;
-        
-        /* Chapter title */
-        --typography-h2: 1.5rem; 
-        --h2-line-height: 2rem;
-        
-        /* Blockquote */
-        --typography-blockquote: 2rem; 
-        
         /* Blockquote BG */
-        --typography-blockquote-white: 3rem;
         --margin-blockquote: 3rem;
-        
-        /* Embed links */
-        --typography-a: 1.3rem; 
-        
-        /* Footer */
-        --typography-footerp: 0.8rem;
-
-        
-
-
-        /* P Text Styling 
-        --typography-base: 1rem;
-        --typography-base-line-height: 1.3rem;
-
-        --base-padding: 1rem;
-        --base-margin: 1.5rem;
-        
-        /* Nav links
-        --typography-nav: 1.2rem;
-        --nav-padding: 15px;
-       
-        /* Chapter title
-        --typography-h2: 1.3rem; 
-        --h2-line-height: 1.8rem;
-
-        --h2-padding: 10px;
-
-        /* Article
-        --article-padding: 1rem;
-        --article-margin: 1.5rem;
-        
-        /* Blockquote
-        --typography-blockquote: 1.5rem; 
-        
-        /* Blockquote BG
-        --typography-blockquote-white: 2.5rem;
-        --margin-blockquote: 2.5rem;
-       
-        /* Embed links
-        --typography-a: 1.5rem; 
-        
-        /* Footer
-        --typography-footerp: 0.7rem;
-
-        --footer-p-padding: 0.3rem;
-
-        /* Spacing
-        --gutter: 10px;
-        --margin: 1rem;
-        --nav-space: var(--typography-nav);
-        --h1-margin-top: 3rem;*/
     }
     
     blockquote {
@@ -452,41 +389,51 @@ footer p {
 }
 
 @media (min-width: 580px) {
+    :root {
+        /* Article */
+        --article-padding: 1.5rem;
+    }
+    
     h2 {
         max-width: 80vw;
     }
 
     article p {
-        max-width: 70vw;
+        max-width: 80vw;
     }
 }
 
 @media (min-width: 640px) {
     :root {
-        --typography-base: 1rem;
-        --typography-base-line-height: 1.3rem;
         /* Nav links */
         --typography-nav: 1.3rem;
-        /* Chapter title */
+        
+        /* Subheaders */
         --typography-h2: 1.5rem; 
         --h2-line-height: 2rem;
+        
         /* Blockquote */
         --typography-blockquote: 2rem; 
+        
         /* Blockquote BG */
         --typography-blockquote-white: 3rem;
         --margin-blockquote: 3rem;
+        
         /* Embed links */
         --typography-a: 1.2rem; 
+        
         /* Footer */
         --typography-footerp: 0.9rem;
+
+        --footer-p-padding: 1.3rem;
+
+        /* Spacing */
+        --gutter: 1rem;
+        --margin: 1.3rem;
     }
     
     body {
         justify-content: center;
-    }
-
-    h1 {
-        padding-top: calc(1 * var(--margin)); 
     }
 
     article {
@@ -497,80 +444,138 @@ footer p {
         max-width: 65vw;
     }
 
-    article p {
-        max-width: 80vw;
-    }
-
     blockquote {
         max-width: 60vw;
+    }
+
+    article p {
+        max-width: 80vw;
     }
 }
 
 @media (min-width: 800px) {   
-    article {
-        padding-bottom: var(--margin);
-    }
-    article p {
-        max-width: 55vw;
-        margin-left: calc(1.5 * var(--margin));
-        margin-right: calc(1.5 * var(--margin));
+    :root {
+        /* P Styling */
+        --typography-base: 1.1rem;
+        --typography-base-line-height: 1.5rem;
+
+        --base-padding: 1rem;
+        --base-margin: 2.5rem;
+
+        /* Article */
+        --article-padding: 1.5rem;
+        --article-margin: 2rem;
     }
 
-    article p:nth-child(1){
-        padding-top: calc(0.5 * var(--margin));
+    article p {
+        max-width: 60vw;
     }
 }
 
 @media (min-width: 960px) {
     :root {
-        --typography-base: 1.3rem;
-        --typography-base-line-height: 1.8rem;
+        /* P Styling */
+        --typography-base: 1.2rem;
+        --typography-base-line-height: 1.5rem;
+
+        --base-padding: 1rem;
+        --base-margin: 3rem;
+        
         /* Nav links */
-        --typography-nav: 1.3rem;
+        --typography-nav: 1.4rem;
+        --nav-padding: 18px;
+        --nav-space: 2rem;
+
+        /* Article */
+        --article-padding: 2rem;
+        --article-margin: 3rem;
+        
         /* Subheaders */
-        --typography-h2: 1.8rem; 
-        --h2-line-height: 2.3rem;
+        --typography-h2: 1.7rem; 
+        --h2-line-height: 2rem;
+
+        --h2-padding: 17px;
+        
         /* Blockquote */
         --typography-blockquote: 2rem; 
+        
         /* Blockquote BG */
         --typography-blockquote-white: 3rem;
         --margin-blockquote: 3rem;
+       
         /* Embed links */
-        --typography-a: 1.3rem; 
+        --typography-a: 1.5rem; 
+        
         /* Footer */
-        --typography-footerp: 0.9rem;
+        --typography-footerp: 1rem;
+
+        --footer-p-padding: 1.5rem;
+
+        /* Spacing */
+        --gutter: 1rem;
+        --margin: 1.7rem;
+    }
+
+    h2 {
+        max-width: 50vw;
     }
 }
 
 @media (min-width: 1200px) {
     :root {
-        --typography-base: 1.2rem;
-        --typography-base-line-height: 1.5rem;
+        /* P Styling */
+        --typography-base: 1.5rem;
+        --typography-base-line-height: 2rem;
+
+        --base-padding: 1.5rem;
+        --base-margin: 3.5rem;
+
         /* Nav links */
-        --typography-nav: 1.5rem;
+        --typography-nav: 1.8rem;
+        --nav-padding: 25px;
+        --nav-space: 3rem;
+
+         /* Article */
+        --article-padding: 3rem;
+        --article-margin: 4rem;
         
         /* Subheaders */
         --typography-h2: 2rem; 
         --h2-line-height: 2.3rem;
+
+        --h2-padding: 20px;
+        
         /* Blockquote */
         --typography-blockquote: 2.5rem; 
+        
         /* Blockquote BG */
         --typography-blockquote-white: 3.5rem;
         --margin-blockquote: 3rem;
+        
         /* Embed links */
-        --typography-a: 1.3rem; 
+        --typography-a: 1.8rem; 
+        
         /* Footer */
-        --typography-footerp: 0.9rem;
+        --typography-footerp: 1.3rem;
+
+        --footer-p-padding: 2rem;
+
+        /* Spacing */
+        --gutter: 1rem;
+        --margin: 1.7rem;
+    }
+
+    .top-button {
+        height: 70px;
+        width: 70px;
+        font-size: 3rem;
+
+        bottom: 40px;
+        right: 40px;
     }
 
     article {
-        max-width: 50vw;
-        padding-top: calc(2 * var(--margin));
-        padding-bottom: calc(1 * var(--margin));
-    }
-
-    h2 {
-        max-width: 40vw;
+        max-width: 70vw;
     }
 
     blockquote {
@@ -584,9 +589,7 @@ footer p {
     }
 
     article p {
-        margin-left: calc(2 * var(--margin));
-        margin-right: calc(2 * var(--margin));
-        max-width: 40vw;
+        max-width: 70vw;
         justify-content: center;
     }
 }

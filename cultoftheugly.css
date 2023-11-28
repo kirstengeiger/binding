@@ -7,6 +7,10 @@ body {
     color: var(--red);
 }
 
+h1 {
+    padding-top: calc(2 * var(--margin));
+}
+
 /* Mobile*/
 @media (min-width: 350px) {
     :root {

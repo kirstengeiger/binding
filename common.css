@@ -16,25 +16,21 @@
 /* 'Playfair Display SC', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
 
+/******** Styling Time! ********/
+
 :root {
     /* Colours */
     --red: #F13028;
     --yellow: #E59801;
     --blue: #0A95FB;
-
-    /* Spacing */
-    --gutter: 10px;
-    --margin: 1rem;
-    --nav-space: var(--typography-nav);
-    --h1-margin-top: 3rem;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-body {
-    margin-top: calc(2 * var(--margin));
+main {
+    margin-bottom: calc(2 * var(--margin));
 }
 
 nav {
@@ -47,7 +43,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding-top: var(--margin);
+    
+    padding-top: var(--nav-padding);
+    padding-bottom: var(--nav-padding);
     padding-left: var(--margin); 
     padding-right: var(--margin); 
 
@@ -60,6 +58,7 @@ nav {
 
 /* Home button in Nav */
 .home {
+    color: black;
     display: inline;
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: var(--typography-nav);
@@ -145,8 +144,13 @@ h1 {
     font-size: var(--typography-h1);
     font-weight: 900;
     color: white;
-    line-height: var(--typography-h1-line-height);
+    line-height: var(--h1-line-height);
+
     padding-left: var(--margin);
+    padding-top: var(--margin);
+    margin-top: var(--h1-margin);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
 }
 
 /* Styles in article title */
@@ -170,6 +174,11 @@ h1 {
     color: white;
     background-color: black;
     top: 0;
+
+    padding-top: var(--author-padding-top);
+    padding-bottom: var(--author-padding-bottom);
+    padding-left: var(--margin);
+    margin-top: var(--author-margin-top);
 }
 
 .author p {
@@ -193,17 +202,32 @@ article {
     background-color: #F0E6D3;
     border: 2px black;
     border-style: solid;
-    padding-top: var(--margin);
+    
+    padding-top: var(--article-padding);
+    padding-bottom: var(--article-padding);
+    margin-top: var(--article-margin);
+    margin-bottom: var(--article-margin);
+    margin-left: var(--article-margin);
+    margin-right: var(--article-margin);
 }
 
 /* Sub headers in the article */
 h2 {
     font-family: 'IBM Plex Mono', monospace;
     font-size: var(--typography-h2);
-    line-height: var(--typography-h2-line-height);
+    line-height: var(--h2-line-height);
     color: white;
     text-transform: uppercase;
     background-color: black;
+
+    padding-top: var(--h2-padding);
+    padding-bottom: var(--h2-padding);
+    padding-left: calc(2 * var(--h2-padding));
+    padding-right: var(--h2-padding);
+
+    margin-top: var(--typography-h2);
+    margin-left: calc(-1.5 * var(--gutter));
+    margin-bottom: var(--typography-h2);
 }
 
 /* Body text */
@@ -211,9 +235,14 @@ article p {
     font-family: 'Archivo', sans-serif;
     font-size: var(--typography-base);
     line-height: var(--typography-base-line-height);
-    padding-bottom: var(--typography-base);
-    margin-left: var(--margin);
-    margin-right: var(--margin);
+    
+    padding-bottom: var(--base-padding);
+    margin-left: var(--base-margin);
+    margin-right: var(--base-margin);
+}
+
+article p:nth-child(1){
+    padding-top: var(--gutter);
 }
 
 /* Pull quotes */
@@ -260,6 +289,7 @@ footer {
     display: flex;
     background: black;
     align-items: left;
+
     padding-top: var(--margin);
     padding-bottom: var(--margin);
     padding-right: var(--gutter);
@@ -270,109 +300,145 @@ footer p {
     font-size: var(--typography-footerp);
     color: white;
     text-transform: uppercase;
-    padding-right: var(--margin);
+    
+    padding-right: var(--footer-p-padding);
     margin-left: var(--margin);
 }
 
 /* Mobile*/
 @media (min-width: 350px) {
-    /* Text Styling */
     :root {
+        /* P Text Styling */
         --typography-base: 1rem;
         --typography-base-line-height: 1.3rem;
+
+        --base-padding: 1rem;
+        --base-margin: 1.5rem;
+        
         /* Nav links */
-        --typography-nav: 1.3rem;
+        --typography-nav: 1.2rem;
+        --nav-padding: 15px;
+       
         /* Chapter title */
-        --typography-h2: 1.5rem; 
-        --typography-h2-line-height: 2rem;
+        --typography-h2: 1.3rem; 
+        --h2-line-height: 1.8rem;
+
+        --h2-padding: 10px;
+
+        /* Article */
+        --article-padding: 1rem;
+        --article-margin: 1.5rem;
+        
         /* Blockquote */
-        --typography-blockquote: 2rem; 
+        --typography-blockquote: 1.5rem; 
+        
         /* Blockquote BG */
-        --typography-blockquote-white: 3rem;
-        --margin-blockquote: 3rem;
+        --typography-blockquote-white: 2.5rem;
+        --margin-blockquote: 2.5rem;
+       
         /* Embed links */
         --typography-a: 1.5rem; 
+        
         /* Footer */
         --typography-footerp: 0.7rem;
-    }
-    
-    main {
-        margin-bottom: calc(2 * var(--margin));
-    }
 
-    nav {
-        padding-top: 15px;
-        padding-bottom: 15px;
+        --footer-p-padding: 0.3rem;
+
+         /* Spacing */
+        --gutter: 10px;
+        --margin: 1rem;
+        --nav-space: var(--typography-nav);
+        --h1-margin-top: 3rem;
     }
 
     .top-button {
-        height: 70px;
-        width: 70px;
-        font-size: 50px;
-    }
-
-    h1 {
-        font-size: var(--typography-h1);
-    }
-
-    article {
-        margin-top: calc(2 * var(--margin));
-        margin-bottom: calc(2* var(--margin));
-        margin-left: calc(1.5 * var(--margin));
-        margin-right: calc(1.5 * var(--margin));
-        padding-bottom: var(--gutter);
-    }
-
-    article p {
-        padding-left: var(--gutter);
-        padding-right: var(--gutter);
-        padding-top: var(--gutter);
-        padding-bottom: var(--gutter);
-    }
-
-    article p:nth-child(1){
-        padding-top: var(--gutter);
+        height: 50px;
+        width: 50px;
+        font-size: 2rem;
     }
     
     h2 {
         max-width: 80vw;
-        padding-top: var(--gutter);
-        padding-bottom: var(--gutter);
-        padding-left: calc(2 * var(--gutter));
-        padding-right: var(--gutter);
-        margin-top: var(--typography-h2);
-        margin-left: calc(-1.5 * var(--gutter));
-        margin-bottom: var(--typography-h2);
     }
 
     blockquote {
         max-width: 80vw;
-        padding-bottom: 1.5rem;
-    }
-
-    .embed-link {
-        font-size: var(--typography-a);
     }
 }
 
 @media (min-width: 500px) {
     :root {
+        /* Article */
         --typography-base: 1rem;
         --typography-base-line-height: 1.3rem;
+
+        --base-padding: 1.5rem;
+        --base-margin: 2rem;
+        
         /* Nav links */
         --typography-nav: 1.3rem;
+        
         /* Chapter title */
         --typography-h2: 1.5rem; 
-        --typography-h2-line-height: 2rem;
+        --h2-line-height: 2rem;
+        
         /* Blockquote */
         --typography-blockquote: 2rem; 
+        
         /* Blockquote BG */
         --typography-blockquote-white: 3rem;
         --margin-blockquote: 3rem;
+        
         /* Embed links */
         --typography-a: 1.3rem; 
+        
         /* Footer */
         --typography-footerp: 0.8rem;
+
+        
+
+
+        /* P Text Styling 
+        --typography-base: 1rem;
+        --typography-base-line-height: 1.3rem;
+
+        --base-padding: 1rem;
+        --base-margin: 1.5rem;
+        
+        /* Nav links
+        --typography-nav: 1.2rem;
+        --nav-padding: 15px;
+       
+        /* Chapter title
+        --typography-h2: 1.3rem; 
+        --h2-line-height: 1.8rem;
+
+        --h2-padding: 10px;
+
+        /* Article
+        --article-padding: 1rem;
+        --article-margin: 1.5rem;
+        
+        /* Blockquote
+        --typography-blockquote: 1.5rem; 
+        
+        /* Blockquote BG
+        --typography-blockquote-white: 2.5rem;
+        --margin-blockquote: 2.5rem;
+       
+        /* Embed links
+        --typography-a: 1.5rem; 
+        
+        /* Footer
+        --typography-footerp: 0.7rem;
+
+        --footer-p-padding: 0.3rem;
+
+        /* Spacing
+        --gutter: 10px;
+        --margin: 1rem;
+        --nav-space: var(--typography-nav);
+        --h1-margin-top: 3rem;*/
     }
     
     blockquote {
@@ -403,7 +469,7 @@ footer p {
         --typography-nav: 1.3rem;
         /* Chapter title */
         --typography-h2: 1.5rem; 
-        --typography-h2-line-height: 2rem;
+        --h2-line-height: 2rem;
         /* Blockquote */
         --typography-blockquote: 2rem; 
         /* Blockquote BG */
@@ -461,9 +527,9 @@ footer p {
         --typography-base-line-height: 1.8rem;
         /* Nav links */
         --typography-nav: 1.3rem;
-        /* Chapter title */
+        /* Subheaders */
         --typography-h2: 1.8rem; 
-        --typography-h2-line-height: 2.3rem;
+        --h2-line-height: 2.3rem;
         /* Blockquote */
         --typography-blockquote: 2rem; 
         /* Blockquote BG */
@@ -482,9 +548,10 @@ footer p {
         --typography-base-line-height: 1.5rem;
         /* Nav links */
         --typography-nav: 1.5rem;
-        /* Chapter title */
+        
+        /* Subheaders */
         --typography-h2: 2rem; 
-        --typography-h2-line-height: 2.3rem;
+        --h2-line-height: 2.3rem;
         /* Blockquote */
         --typography-blockquote: 2.5rem; 
         /* Blockquote BG */

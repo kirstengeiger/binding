@@ -3,21 +3,6 @@ body {
     background-color: #E59801;
 }
 
-h1 {
-    padding-top: var(--h1-margin-top);
-    margin-left: var(--margin);
-    margin-right: var(--margin);
-}
-
-.home {
-    color: black;
-}
-
-.author {
-    padding-left: var(--margin);
-    padding-bottom: calc(2 * var(--margin));
-}
-
 .nav-link-yellow {
     color: var(--yellow);
 }
@@ -27,14 +12,17 @@ h1 {
     :root {
         /* Article title */
         --typography-h1: 5rem;
-        --typography-h1-line-height: 4rem;
-        --h1-margin-top: 3rem;
+        --h1-line-height: 4rem;
+        --h1-margin: 4rem;
+
+        /* Author & OG article layout */
+        --author-padding-top: 10rem;
+        --author-padding-bottom: 2rem;
+        --author-margin-top: -7.5rem;
     }
 
-    /* Author's name & publishing date */
+    /* Author & OG article size */
     .author {
-        padding-top: calc(10 * var(--margin));
-        margin-top: calc(-12 * var(--gutter));
         max-width: 80vw;
     }
 }
@@ -43,13 +31,7 @@ h1 {
     :root {
         /* Article title */
         --typography-h1: 6.5rem;
-        --typography-h1-line-height: 6rem;
-    }
-
-    .author {
-        padding-top: calc(8 * var(--margin));
-        padding-left: calc(1.3 * var(--margin));
-        margin-top: calc(-9 * var(--gutter));
+        --h1-line-height: 5rem;
     }
 }
 
@@ -57,19 +39,17 @@ h1 {
     :root {
         /* Article title */
         --typography-h1: 7rem;
-        --typography-h1-line-height: 5rem;
+        --h1-line-height: 5rem;
+
+        /* Author & OG article layout */
+        --author-padding-top: 11rem;
+        --author-padding-bottom: 2rem;
+        --author-margin-top: -7.5rem;
    }
 
    h1 {
         max-width: 100vw;
    }
-    
-    .author {
-        padding-top: calc(8 * var(--margin));
-        padding-bottom: var(--margin);
-        padding-left: calc(1 * var(--margin));
-        margin-top: calc(-9 * var(--gutter));
-    }
 
     article {
         margin-left: 30vw;
@@ -83,32 +63,45 @@ h1 {
 @media (min-width: 800px) {   
     :root {
         /* Article title */
-        --typography-h1: 8rem;
-        --typography-h1-line-height: 6rem;
+        --typography-h1: 7rem;
+        --h1-line-height: 6rem;
+
+        /* Author & OG article layout */
+        --author-padding-top: 12rem;
+        --author-padding-bottom: 2rem;
+        --author-margin-top: -9rem;
    } 
 
-    article {
+   h1 {
+        max-width: 80vw;
+   } 
+
+   article {
         margin-left: 30vw;
     }
 }
 
 @media (min-width: 960px) {
     :root {
-        --typography-h1: 10rem;
-        --typography-h1-line-height: 7rem;
+        /* Article title */
+        --typography-h1: 8rem;
+        --h1-line-height: 7rem;
+
+        /* Author & OG article layout */
+        --author-padding-top: 12rem;
+        --author-padding-bottom: 2rem;
+        --author-margin-top: -9rem;
     }
-    
-    .author {
-        padding-top: calc(7 * var(--margin));
-        padding-left: calc(1 * var(--margin));
-        margin-top: calc(-8 * var(--gutter));
+
+    h1 {
+        max-width: 80vw;
     }
 }
 
 @media (min-width: 1200px) {
     :root {
         --typography-h1: 10rem;
-        --typography-h1-line-height: 9rem;
+        --h1-line-height: 9rem;
     }
 
     .author {

@@ -3,21 +3,8 @@ body {
     background-color: var(--blue);
 }
 
-h1 {
-    padding-top: var(--margin);
-    margin-top: var(--h1-margin);
-    margin-left: var(--margin);
-    margin-right: var(--margin);
-}
-
 .nav-link-blue {
     color: var(--blue);
-}
-
-.author {
-    padding-top: var(--author-padding-top);
-    padding-bottom: var(--author-padding-bottom);
-    margin-top: var(--author-margin-top);
 }
 
 /* Mobile*/
@@ -25,13 +12,13 @@ h1 {
     :root {
         /* Article title */
         --typography-h1: 6rem;
-        --typography-h1-line-height: 5rem;
-
-        --author-padding-top: 32rem;
-        --author-padding-bottom: 2rem;
-        --author-margin-top: -30rem;
-
+        --h1-line-height: 5rem;
         --h1-margin: 4rem;
+
+        /* Author & OG article */
+        --author-padding-top: 21rem;
+        --author-padding-bottom: 2rem;
+        --author-margin-top: -20rem;
     }
 
     /* Author's name & publishing date */
@@ -45,7 +32,7 @@ h1 {
     :root {
         /* Article title */
         --typography-h1: 5.6rem;
-        --typography-h1-line-height: 6rem;
+        --h1-line-height: 6rem;
     }
 
     .author {
@@ -59,7 +46,7 @@ h1 {
     :root {
         /* Article title*/
         --typography-h1: 7rem;
-        --typography-h1-line-height: 6rem;
+        --h1-line-height: 6rem;
    }
 
    h1 {
@@ -86,7 +73,7 @@ h1 {
     :root {
         /* Article title*/
         --typography-h1: 8rem;
-        --typography-h1-line-height: 7rem;
+        --h1-line-height: 7rem;
    } 
 
     article {
@@ -97,7 +84,7 @@ h1 {
 @media (min-width: 960px) {
     :root {
         --typography-h1: 10rem;
-        --typography-h1-line-height: 8rem;
+        --h1-line-height: 8rem;
     }
     
     .author {
@@ -114,7 +101,7 @@ h1 {
 @media (min-width: 1200px) {
     :root {
         --typography-h1: 10rem;
-        --typography-h1-line-height: 9rem;
+        --h1-line-height: 9rem;
     }
 
     h1 {

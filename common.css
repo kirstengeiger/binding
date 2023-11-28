@@ -246,6 +246,7 @@ article p:nth-child(1){
 blockquote {
     margin-top: var(--typography-margin);
     margin-bottom: var(--typography-margin);
+
 }
 
 blockquote > p {
@@ -255,18 +256,25 @@ blockquote > p {
 	hyphens: manual;
 }
 
+/* Parent Element */
 .black {
     font-size: var(--typography-blockquote);
     line-height: calc(1 * var(--typography-blockquote));
     color: black;
-    padding-left: var(--gutter);
-    margin-top: -13rem;
+
+    position: relative;
+    padding-bottom: -30rem;
 }
 
+/* Child Element */
 .white {
-    font-size: var(--typography-blockquote-white);
-    line-height: var(--typography-blockquote-white);
+    transform-origin: top left;
+    transform: scale(1.5);
     color: white;
+
+    position: absolute;
+    top: 0;
+    left: 0; 
 }
 
 /* In-article links */
@@ -524,7 +532,7 @@ footer p {
 @media (min-width: 1200px) {
     :root {
         /* P Styling */
-        --typography-base: 1.3rem;
+        --typography-base: 1.25rem;
         --typography-base-line-height: 1.8rem;
 
         --base-padding: 1.5rem;
@@ -546,11 +554,7 @@ footer p {
         --h2-padding: 20px;
         
         /* Blockquote */
-        --typography-blockquote: 2.5rem; 
-        
-        /* Blockquote BG */
-        --typography-blockquote-white: 3.5rem;
-        --margin-blockquote: 3rem;
+        --typography-blockquote: 2rem; 
         
         /* Embed links */
         --typography-a: 1.6rem; 
@@ -585,7 +589,10 @@ footer p {
 
     .black {
         padding-left: var(--gutter);
-        margin-top: -15rem;
+    }
+
+    .white {
+        max-width: 30vw;
     }
 
     article p {

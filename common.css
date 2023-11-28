@@ -145,7 +145,7 @@ h1 {
     line-height: var(--h1-line-height);
 
     padding-left: var(--margin);
-    padding-top: var(--margin);
+    padding-top: calc(2 * var(--margin));
     margin-top: var(--h1-margin);
     margin-left: var(--margin);
     margin-right: var(--margin);
@@ -524,15 +524,15 @@ footer p {
 @media (min-width: 1200px) {
     :root {
         /* P Styling */
-        --typography-base: 1.5rem;
-        --typography-base-line-height: 2rem;
+        --typography-base: 1.3rem;
+        --typography-base-line-height: 1.8rem;
 
         --base-padding: 1.5rem;
         --base-margin: 3.5rem;
 
         /* Nav links */
-        --typography-nav: 1.8rem;
-        --nav-padding: 25px;
+        --typography-nav: 1.6rem;
+        --nav-padding: 20px;
         --nav-space: 3rem;
 
          /* Article */
@@ -540,7 +540,7 @@ footer p {
         --article-margin: 4rem;
         
         /* Subheaders */
-        --typography-h2: 2rem; 
+        --typography-h2: 1.9rem; 
         --h2-line-height: 2.3rem;
 
         --h2-padding: 20px;
@@ -553,10 +553,10 @@ footer p {
         --margin-blockquote: 3rem;
         
         /* Embed links */
-        --typography-a: 1.8rem; 
+        --typography-a: 1.6rem; 
         
         /* Footer */
-        --typography-footerp: 1.3rem;
+        --typography-footerp: 1.1rem;
 
         --footer-p-padding: 2rem;
 
@@ -575,7 +575,7 @@ footer p {
     }
 
     article {
-        max-width: 70vw;
+        max-width: 55vw;
     }
 
     blockquote {
@@ -589,7 +589,7 @@ footer p {
     }
 
     article p {
-        max-width: 70vw;
+        max-width: 45vw;
         justify-content: center;
     }
 }

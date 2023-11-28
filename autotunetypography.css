@@ -97,16 +97,20 @@ body {
 @media (min-width: 1200px) {
     :root {
         --typography-h1: 10rem;
-        --h1-line-height: 9rem;
+        --h1-line-height: 8rem;
+
+        /* Author & OG article layout */
+        --author-padding-top: 9rem;
+        --author-padding-bottom: 2rem;
+        --author-margin-top: -5rem;
+        
     }
 
-    .author {
-        padding-top: calc(10 * var(--margin));
-        padding-left: calc(1 * var(--margin));
-        margin-top: calc(-12 * var(--gutter));
-    }
+    h1 {
+        max-width: 100vw;
+    } 
 
     article {
-        margin-left: 30vw;
+        margin-left: 40vw;
     }
 }

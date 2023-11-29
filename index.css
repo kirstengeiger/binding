@@ -102,6 +102,11 @@ h3 {
     margin-top: var(--context-margin-top);
 }
 
+em {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+}
+
 /* Mobile */
 @media (min-width: 375px) {
     :root {        

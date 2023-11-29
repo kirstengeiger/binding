@@ -197,7 +197,6 @@ h1 {
     border: 2px black;
     border-style: solid;
     
-    padding-top: var(--article-padding);
     padding-bottom: var(--article-padding);
     margin-top: var(--article-margin);
     margin-bottom: var(--article-margin);

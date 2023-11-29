@@ -23,10 +23,8 @@ h1 {
 }
 
 article {
-    margin-top: var(--article-margin);
-    margin-bottom: var(--article-margin);
-    margin-left: var(--article-margin);
-    margin-right: var(--article-margin);
+    padding-top: var(--article-padding);
+    padding-bottom: var(--article-padding);
 }
 
 .maintitle-index {
@@ -40,12 +38,18 @@ article {
     padding-bottom: var(--article-padding);
 }
 
+.readings {
+    margin-bottom: var(--readings-margin-bottom);
+}
+
 /* Title of Each Article */
 h3 {
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: var(--typography-h3);
     font-weight: 800;
     line-height: var(--h3-line-height);
+
+    padding-left: var(--h3-padding);
 }
 
 .reading-link {
@@ -99,9 +103,11 @@ p {
         --h1-line-height: 4.5rem;
         --h1-margin: 4rem;
 
-         /* Articles */
-         --article-padding: 1rem;
-         --article-margin: 1rem;
+        /* Articles */
+        --article-padding: 2rem;
+        
+        /* Space between articles */
+        --readings-margin-bottom: 3rem;
 
         /* Reading titles */
         --typography-h3: 3.5rem;
@@ -113,9 +119,17 @@ p {
         --author-small-margin: 1rem;
         --author-small-left: 3rem;
 
-        --about-padding-top: 2.5rem;
-        --about-margin-top: -2rem;
+        --about-padding-top: 6rem;
+        --about-margin-top: -5rem;
     }
+
+    .about-red,
+    .about-yellow,
+    .about-blue {
+        max-width: 80vw;
+        margin-left: 10vw;
+    }
+
 }
 
 @media (min-width: 500px) {

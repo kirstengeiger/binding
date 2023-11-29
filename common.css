@@ -605,7 +605,7 @@ footer p {
     }
 
     blockquote {
-        max-width: 50vw;
+        max-width: 45vw;
     }
 
     article p {
@@ -614,10 +614,6 @@ footer p {
     }
 
     article {
-        max-width: 50vw;
-    }
-
-    blockquote {
         max-width: 50vw;
     }
 }

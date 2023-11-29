@@ -132,14 +132,14 @@ footer {
 }
 
 /* Mobile */
-@media (min-width: 375px) {
+@media (min-width: 350px) {
     :root {        
         /* Page title */
         --typography-h1: 5rem;
         --h1-line-height: 4.5rem;
         --h1-margin: 3rem;
         --h1-padding: 7rem;
-        --h1-padding-top: 7rem;
+        --h1-padding-top: 8rem;
 
         /* Intro text styling */
         --typography-intro-p: 1rem;

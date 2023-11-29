@@ -243,7 +243,7 @@ article p:nth-child(1){
 
 /* Pull quotes */
 blockquote {
-    margin-top: calc(1 * var(--typography-margin));
+    margin-top: var(--typography-margin);
     margin-bottom: calc(1 * var(--typography-margin));
     padding-bottom: var(--blockquote-padding-bottom);
     /* padding-left: var(--blockquote-padding); */

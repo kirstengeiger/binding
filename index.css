@@ -114,15 +114,8 @@ h3 {
     color: white;
 }
 
-hr {
-    display: block;
-    height: 2px;
-    border-top: 2px solid white;
-    width: 100%;
-
-    padding-top: var(--padding);
-    padding-bottom: var(--padding);
-    padding-left: var(--padding);
+.author-small {
+    padding-top: var(--author-small-padding);
 }
 
 footer {
@@ -277,7 +270,7 @@ footer {
 
         /* Author small */
         --author-p: 1.5rem;
-        --author-small-padding: 1.3rem;
+        --author-small-padding: 1rem;
         --author-small-margin: 1.3rem;
         --author-small-left: 1rem;
     }

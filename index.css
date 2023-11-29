@@ -24,7 +24,7 @@ h1 {
 }
 
 .maintitle-index h1 {
-    color: white;
+    color: black;
 }
 
 article {
@@ -33,11 +33,16 @@ article {
 }
 
 .maintitle-index {
-    background: black;
+    background: var(--off-white);
+    max-width: 100vw;
 }
 
 .intro {
     background-color: black;
+    max-width: 100vw;
+
+    display: grid;
+    justify-content: center;
     
     padding-top: var(--article-padding);
     padding-bottom: var(--article-padding);
@@ -58,6 +63,10 @@ article {
 .selected-readings {
     background-color: var(--off-white);
     padding-top: var(--selected-readings-padding);
+    max-width: 100vw;
+
+    display: grid;
+    justify-content: center;
 }
 
 /* Title of Each Article */
@@ -68,7 +77,6 @@ h3 {
     line-height: var(--h3-line-height);
 
     padding-left: var(--h3-padding);
-    padding-right: var(--h3-padding);
 }
 
 .reading-link {
@@ -86,21 +94,8 @@ h3 {
 .about-yellow {
     padding-top: var(--about-padding-top);
     margin-top: var(--about-margin-top);
-    background-color: black;
 }
 
-/* .title-red {
-    color: var(--red);
-    padding-left: var(--context-padding);
-}
-
-.title-yellow {
-    olor: var(--yellow);
-}
-
-.title-blue {
-    color: var(--blue);
-} */
 
 .about-red {
     background-color: var(--red);
@@ -138,9 +133,8 @@ hr {
         --typography-h1: 5rem;
         --h1-line-height: 4.5rem;
         --h1-margin: 3rem;
+        --h1-padding: 3rem;
         --h1-padding-top: 3rem;
-
-        --typography-asterisk-p: 10rem;
 
         /* Intro text styling */
         --typography-intro-p: 1rem;
@@ -149,7 +143,7 @@ hr {
         /* Articles */
         --article-padding: 2rem;
 
-        --selected-readings-padding: 4rem;
+        --selected-readings-padding: 3.5rem;
         
         /* Space between articles */
         --readings-margin-bottom: 3rem;
@@ -171,20 +165,54 @@ hr {
         --question-padding-bottom: 10rem;
     }
 
+    .intro-text {
+        max-width: 90vw;
+    }
+
     .about-red,
     .about-yellow,
     .about-blue {
-        max-width: 75vw;
-        margin-left: 13vw;
+        max-width: 60vw;
+        margin-left: 30vw;
     }
-
-    .intro-text {
-        max-width: 90vw;
-        margin-left: 7vw;
-    }
-
 }
 
-@media (min-width: 500px) {
-   
+@media (min-width: 499px) {
+    :root {        
+        /* Page title */
+        --typography-h1: 6rem;
+        --h1-line-height: 5rem;
+        --h1-margin: 3rem;
+        --h1-padding-top: 3rem;
+
+        /* Reading titles */
+        --typography-h3: 4rem;
+        --h3-line-height: 3.8rem;
+        --h3-padding: 1.8rem;
+    }
+
+    h1 {
+        max-width: 80vw;
+        margin-left: 10vw;
+    }
+
+    h3 {
+        max-width: 70vw;
+    }
+
+    .about-red,
+    .about-yellow,
+    .about-blue {
+        max-width: 60vw;
+        margin-left: 28vw;
+    }
+}
+
+@media (min-width: 600px) {
+    .about-red,
+    .about-yellow,
+    .about-blue {
+        max-width: 70vw;
+        margin-left: 10vw;
+    }
 }

@@ -297,8 +297,8 @@ footer p {
 @media (min-width: 350px) {
     :root {
         /* P Styling */
-        --typography-base: 1rem;
-        --typography-base-line-height: 1.5rem;
+        --typography-base: 1.1rem;
+        --typography-base-line-height: 1.6rem;
 
         --base-padding: 1rem;
         --base-margin: 1.5rem;
@@ -322,7 +322,7 @@ footer p {
         --article-margin: 1.5rem;
         
         /* Blockquote */
-        --typography-blockquote: 1.5rem; 
+        --typography-blockquote: 1.7rem; 
         --blockquote-padding-bottom: 2rem;
         --margin-blockquote: 2.5rem;
        

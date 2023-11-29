@@ -238,7 +238,7 @@ article p {
 }
 
 article p:nth-child(1){
-    padding-top: var(--gutter);
+    padding-top: var(--base-margin);
 }
 
 /* Pull quotes */

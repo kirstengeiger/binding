@@ -18,8 +18,9 @@ h1 {
     align-items: center;
     text-align: center;
 
-    padding-top: calc(4 * var(--margin));
+    padding-top: var(--h1-padding-top);
     padding-bottom: calc(4 * var(--margin));
+    top: 0;
 }
 
 .maintitle-index h1 {
@@ -42,19 +43,10 @@ article {
     padding-bottom: var(--article-padding);
 }
 
-p .question {
-    font-family: 'Crimson Pro', serif;
-    font-style: italic;
-    font-size: var(--typography-question);
-    color: white;
-    line-height: var(--typography-question);
-    
-    margin-bottom: var(--question-padding-bottom);
-}
-
 .intro-text p {
     font-family:'Archivo', sans-serif;
     font-size: var(--typography-intro-p);
+    line-height: var(--intro-p-line-height);
     color: white;
 }
 
@@ -76,6 +68,7 @@ h3 {
     line-height: var(--h3-line-height);
 
     padding-left: var(--h3-padding);
+    padding-right: var(--h3-padding);
 }
 
 .reading-link {
@@ -144,10 +137,14 @@ hr {
         /* Page title */
         --typography-h1: 5rem;
         --h1-line-height: 4.5rem;
-        --h1-margin: 4rem;
+        --h1-margin: 3rem;
+        --h1-padding-top: 3rem;
+
+        --typography-asterisk-p: 10rem;
 
         /* Intro text styling */
         --typography-intro-p: 1rem;
+        --intro-p-line-height: 1.5rem;
 
         /* Articles */
         --article-padding: 2rem;
@@ -158,7 +155,7 @@ hr {
         --readings-margin-bottom: 3rem;
 
         /* Reading titles */
-        --typography-h3: 3.5rem;
+        --typography-h3: 3.7rem;
         --h3-line-height: 3.5rem;
         --h3-padding: 1.8rem;
 
@@ -178,12 +175,12 @@ hr {
     .about-yellow,
     .about-blue {
         max-width: 75vw;
-        margin-left: 15vw;
+        margin-left: 13vw;
     }
 
     .intro-text {
         max-width: 90vw;
-        margin-left: 5vw;
+        margin-left: 7vw;
     }
 
 }

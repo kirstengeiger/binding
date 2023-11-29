@@ -44,8 +44,8 @@ article {
     display: grid;
     justify-content: center;
     
-    padding-top: var(--article-padding);
-    padding-bottom: var(--article-padding);
+    padding-top: var(--intro-padding);
+    padding-bottom: var(--intro-padding);
 }
 
 .intro-text p {
@@ -65,7 +65,8 @@ article {
     padding-top: var(--selected-readings-padding);
     max-width: 100vw;
 
-    display: grid;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -197,22 +198,72 @@ hr {
     }
 
     h3 {
-        max-width: 70vw;
+        max-width: 90vw;
     }
 
     .about-red,
     .about-yellow,
     .about-blue {
         max-width: 60vw;
-        margin-left: 28vw;
+        margin-left: 20vw;
     }
 }
 
 @media (min-width: 600px) {
+    :root {        
+        /* Page title */
+        --typography-h1: 6.5rem;
+        --h1-line-height: 5.5rem;
+        --h1-margin: 3rem;
+        --h1-padding-top: 3rem;
+
+        /* Reading titles */
+        --typography-h3: 4rem;
+        --h3-line-height: 3.8rem;
+        --h3-padding: 1.8rem;
+    }
+
+    .intro-text {
+        max-width: 80vw;
+    }
+
     .about-red,
     .about-yellow,
     .about-blue {
-        max-width: 70vw;
-        margin-left: 10vw;
+        max-width: 60vw;
+        margin-left: 25vw;
     }
+}
+
+@media (min-width: 1200px) { 
+    :root {        
+        /* Page title */
+        --typography-h1: 10rem;
+        --h1-line-height: 10rem;
+        --h1-margin: 3rem;
+        --h1-padding-top: 5rem;
+
+        /* Intro text styling */
+        --typography-intro-p: 1.3rem;
+        --intro-p-line-height: 1.8rem;
+        --intro-padding: 3rem;
+
+        /* Reading titles */
+        --typography-h3: 3.5rem;
+        --h3-line-height: 3.8rem;
+        --h3-padding: 1.8rem;
+    }
+
+    h3 {
+        max-width: 90%;
+    }
+    
+    .about-red,
+    .about-yellow,
+    .about-blue {
+        max-width: 70%;
+        margin-left: 15%;
+        top: 0;
+    }
+
 }

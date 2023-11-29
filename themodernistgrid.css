@@ -29,7 +29,7 @@ footer p {
 
         /* Author & OG article */
         --author-padding-top: 21rem;
-        --author-padding-bottom: 2rem;
+        --author-padding-bottom: 3rem;
         --author-margin-top: -20rem;
     }
 
@@ -52,6 +52,10 @@ footer p {
         padding-left: var(--margin);
         margin-top: -23rem;
     }
+
+    .solo-readings {
+        margin-left: 10vw;
+    }
 }
 
 @media (min-width: 630px) {
@@ -73,7 +77,7 @@ footer p {
     }
 
     .solo-readings {
-        margin-left: 30vw;
+        margin-left: 15vw;
     }
 }
 
@@ -85,7 +89,7 @@ footer p {
    } 
 
    .solo-readings {
-        margin-left: 13vw;
+        margin-left: 17vw;
     }
 }
 
@@ -102,7 +106,7 @@ footer p {
     }
 
     .solo-readings {
-        margin-left: 15vw;
+        margin-left: 20vw;
     }
 }
 
@@ -118,11 +122,12 @@ footer p {
 
     .author {
         padding-top: 35rem;
+        padding-bottom: var(--margin);
         padding-left: 2rem;
-        margin-top: -33rem;
+        margin-top: -32rem;
     }
 
     .solo-readings {
-        margin-left: 22vw;
+        margin-left: 25vw;
     }
 }

@@ -45,6 +45,10 @@ footer p {
         --typography-h1: 6.5rem;
         --h1-line-height: 5rem;
     }
+
+    .solo-readings {
+        margin-left: 15vw;
+    }
 }
 
 @media (min-width: 630px) {

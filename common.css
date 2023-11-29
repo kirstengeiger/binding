@@ -220,7 +220,7 @@ h2 {
 
     padding-top: var(--h2-padding);
     padding-bottom: var(--h2-padding);
-    padding-left: calc(2.5 * var(--h2-padding));
+    padding-left: calc(2.8 * var(--h2-padding));
     padding-right: var(--h2-padding);
 
     margin-top: var(--typography-h2);
@@ -244,13 +244,13 @@ article p:nth-child(1){
 
 /* Pull quotes */
 blockquote {
-    padding-bottom: var(--blockquote-padding);
-    padding-left: var(--blockquote-padding); 
     margin-top: calc(1 * var(--typography-margin));
-    margin-bottom: var(--typography-margin);
+    margin-bottom: calc(1 * var(--typography-margin));
+    padding-bottom: var(--blockquote-padding-bottom);
+    /* padding-left: var(--blockquote-padding); */
 }
 
-blockquote > p {
+blockquote p {
     font-size: var(--typography-blockquote);
     line-height: var(--blockquote-line-height);
     font-family: 'Lora', serif;
@@ -259,6 +259,7 @@ blockquote > p {
 	hyphens: manual;
     text-shadow: 20px 10px white;
 }
+
 
 /* In-article links */
 .embed-link {
@@ -287,6 +288,7 @@ footer {
 footer p {
     font-family: 'IBM Plex Mono', monospace;
     font-size: var(--typography-footerp);
+
     text-transform: uppercase;
     
     padding-right: var(--footer-p-padding);
@@ -297,7 +299,7 @@ footer p {
     :root {
         /* P Styling */
         --typography-base: 1rem;
-        --typography-base-line-height: 1.3rem;
+        --typography-base-line-height: 1.5rem;
 
         --base-padding: 1rem;
         --base-margin: 1.5rem;
@@ -322,6 +324,7 @@ footer p {
         
         /* Blockquote */
         --typography-blockquote: 1.5rem; 
+        --blockquote-padding-bottom: 2rem;
         
         /* Blockquote BG */
         --typography-blockquote-white: 2.5rem;
@@ -351,15 +354,15 @@ footer p {
     
     h2 {
         max-width: 80vw;
-        margin-left: calc(-1.5 * var(--gutter));
+        margin-left: calc(-0.8 * var(--gutter));
     }
 
-    /* blockquote {
+    blockquote {
         max-width: 80vw;
-    } */
+    }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 530px) {
     :root {
         /* P Styling */
         --base-margin: 2rem;
@@ -367,14 +370,13 @@ footer p {
         /* Blockquote BG */
         --margin-blockquote: 3rem;
     }
-    
-    /* blockquote {
+
+    h2 {
+        max-width: 70vw;
+    }
+
+    article {
         max-width: 80vw;
-        padding-bottom: 1.5rem;
-    } */
-    
-    .white {
-        margin-bottom: var(--margin);
     }
 }
 
@@ -538,7 +540,7 @@ footer p {
         /* Blockquote */
         --typography-blockquote: 2.8rem; 
         --blockquote-line-height: 3rem;
-        --blockquote-padding: 2.8rem;
+        --blockquote-padding: 3rem;
         
         /* Embed links */
         --typography-a: 1.5rem; 

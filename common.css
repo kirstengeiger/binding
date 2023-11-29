@@ -222,7 +222,7 @@ h2 {
     padding-right: var(--h2-padding);
 
     margin-top: var(--typography-h2);
-    margin-bottom: var(--typography-h2);
+    margin-bottom: calc(1.5 * var(--typography-h2));
 }
 
 /* Body text */
@@ -242,13 +242,15 @@ article p:nth-child(1){
 
 /* Pull quotes */
 blockquote {
-    margin-top: var(--typography-margin);
+    padding-bottom: var(--blockquote-padding);
+    padding-left: var(--blockquote-padding); 
+    margin-top: calc(1 * var(--typography-margin));
     margin-bottom: var(--typography-margin);
 }
 
 blockquote > p {
     font-size: var(--typography-blockquote);
-    line-height: var(--typography-blockquote);
+    line-height: var(--blockquote-line-height);
     font-family: 'Lora', serif;
     font-weight: 800;
     -webkit-hyphens: manual; /* Safari uses prefix. */
@@ -262,10 +264,11 @@ blockquote > p {
     font-size: var(--typography-a);
     font-style: italic;
     font-weight: 500;
+    text-decoration: underline;
 }
 
 .embed-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Footer Style */
@@ -533,10 +536,12 @@ footer p {
         --h2-padding: 20px;
         
         /* Blockquote */
-        --typography-blockquote: 2.5rem; 
+        --typography-blockquote: 2.8rem; 
+        --blockquote-line-height: 3rem;
+        --blockquote-padding: 2.8rem;
         
         /* Embed links */
-        --typography-a: 1.6rem; 
+        --typography-a: 1.5rem; 
         
         /* Footer */
         --typography-footerp: 1.1rem;
@@ -562,7 +567,6 @@ footer p {
     }
 
     blockquote {
-        padding-bottom: 5rem;
         max-width: 50vw;
     }
 

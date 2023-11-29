@@ -220,7 +220,7 @@ h2 {
 
     padding-top: var(--h2-padding);
     padding-bottom: var(--h2-padding);
-    padding-left: calc(2.8 * var(--h2-padding));
+    padding-left: calc(3 * var(--h2-padding));
     padding-right: var(--h2-padding);
 
     margin-top: var(--typography-h2);

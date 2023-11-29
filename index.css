@@ -1,3 +1,19 @@
+a {
+    color: black;
+}
+
+.nav-link-red:hover {
+    color: var(--red);
+}
+
+.nav-link-yellow:hover {
+    color: var(--yellow);
+}
+
+.nav-link-blue:hover {
+    color: var(--blue);
+}
+
 h1 {
     align-items: center;
     text-align: center;
@@ -18,9 +34,7 @@ article {
 }
 
 .intro {
-    background: #F0E6D3;
-    border: 2px black;
-    border-style: solid;
+    background-color: #F0E6D3;
     
     padding-top: var(--article-padding);
     padding-bottom: var(--article-padding);
@@ -30,54 +44,64 @@ article {
 h3 {
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: var(--typography-h3);
-    font-weight: 600;
+    font-weight: 800;
     line-height: var(--h3-line-height);
 }
 
-.red {
-    color: var(--red);
-}
-
-.yellow {
-    color: var(--yellow);
-}
-
-.blue {
-    color: var(--blue);
-}
-
-.author-small {
-    background-color: black;
-    color: white;
-    padding: var(--author-small-padding);
-
-    margin-top: var(--author-small-margin);
-    margin-left: var( --author-small-left);
-}
-
-a {
+.reading-link {
     color: black;
 }
 
-.nav-link-red:hover {
-    color: var(--red);
+.reading-link:hover {
+    /* font-family: 'Times New Roman', serif; */
+    font-style: italic;
+    text-decoration: underline;
 }
 
-.nav-link-yellow:hover {
-    color: var(--yellow);
+.about-red,
+.about-blue,
+.about-yellow {
+    padding-top: var(--about-padding-top);
+    margin-top: var(--about-margin-top);
 }
 
-.nav-link-blue:hover {
-    color: var(--blue);
+.about-red {
+    background-color: var(--red);
+    padding-left: var(--context-padding);
+}
+
+.about-yellow {
+    background-color: var(--yellow);
+}
+
+.about-blue {
+    background-color: var(--blue);
+}
+
+p {
+    font-size: var(--context-typography);
+
+    padding-top: var(--context-padding-top);
+    padding-left: var(--context-padding);
+    padding-right: var(--context-padding);
+    line-height: var(--typography-base-line-height);
+}
+
+.context {
+    margin-top: var(--context-margin-top);
 }
 
 /* Mobile */
 @media (min-width: 375px) {
-    :root {
-        /* Article title */
+    :root {        
+        /* Page title */
         --typography-h1: 5rem;
         --h1-line-height: 4.5rem;
         --h1-margin: 4rem;
+
+         /* Articles */
+         --article-padding: 1rem;
+         --article-margin: 1rem;
 
         /* Reading titles */
         --typography-h3: 3.5rem;
@@ -86,12 +110,11 @@ a {
 
         /* Author small */
         --author-small-padding: 1rem;
-        --author-small-margin: -1rem;
+        --author-small-margin: 1rem;
         --author-small-left: 3rem;
 
-        /* Article */
-        --article-padding: 1rem;
-        --article-margin: 1.5rem;
+        --about-padding-top: 2.5rem;
+        --about-margin-top: -2rem;
     }
 }
 

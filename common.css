@@ -23,6 +23,7 @@
     --red: #F13028;
     --yellow: #E59801;
     --blue: #0A95FB;
+    --off-white: #F0E6D3;
 }
 
 html {
@@ -196,7 +197,7 @@ h1 {
 
 /* Readings for individual articles */
 .solo-readings {
-    background-color: #F0E6D3;
+    background-color: var(--off-white);
     border: 2px black;
     border-style: solid;
     

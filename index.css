@@ -22,20 +22,40 @@ h1 {
     padding-bottom: calc(4 * var(--margin));
 }
 
+.maintitle-index h1 {
+    color: white;
+}
+
 article {
     padding-top: var(--article-padding);
     padding-bottom: var(--article-padding);
 }
 
 .maintitle-index {
-    background: black
+    background: black;
 }
 
 .intro {
-    background-color: #F0E6D3;
+    background-color: black;
     
     padding-top: var(--article-padding);
     padding-bottom: var(--article-padding);
+}
+
+p .question {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: var(--typography-question);
+    color: white;
+    line-height: var(--typography-question);
+    
+    margin-bottom: var(--question-padding-bottom);
+}
+
+.intro-text p {
+    font-family:'Archivo', sans-serif;
+    font-size: var(--typography-intro-p);
+    color: white;
 }
 
 .readings {
@@ -44,7 +64,8 @@ article {
 
 /* Readings Chosen Section*/
 .selected-readings {
-    background-color: black;
+    background-color: var(--off-white);
+    padding-top: var(--selected-readings-padding);
 }
 
 /* Title of Each Article */
@@ -58,7 +79,7 @@ h3 {
 }
 
 .reading-link {
-    color: white;
+    color: black;
 }
 
 .reading-link:hover {
@@ -72,7 +93,21 @@ h3 {
 .about-yellow {
     padding-top: var(--about-padding-top);
     margin-top: var(--about-margin-top);
+    background-color: black;
 }
+
+/* .title-red {
+    color: var(--red);
+    padding-left: var(--context-padding);
+}
+
+.title-yellow {
+    olor: var(--yellow);
+}
+
+.title-blue {
+    color: var(--blue);
+} */
 
 .about-red {
     background-color: var(--red);
@@ -91,21 +126,17 @@ h3 {
 .selected-readings p {
     font-size: var(--context-typography);
     color: white;
-
-    padding-top: var(--context-padding-top);
-    padding-left: var(--context-padding);
-    padding-right: var(--context-padding);
-    line-height: var(--typography-base-line-height);
 }
 
-.context {
-    margin-top: var(--context-margin-top);
+hr {
+    display: block;
+    height: 2px;
+    border-top: 2px solid white;
+    width: 50%;
+    justify-content: center;
+    padding-left: var(--padding);
 }
 
-em {
-    font-family: 'Crimson Pro', serif;
-    font-style: italic;
-}
 
 /* Mobile */
 @media (min-width: 375px) {
@@ -115,8 +146,13 @@ em {
         --h1-line-height: 4.5rem;
         --h1-margin: 4rem;
 
+        /* Intro text styling */
+        --typography-intro-p: 1rem;
+
         /* Articles */
         --article-padding: 2rem;
+
+        --selected-readings-padding: 4rem;
         
         /* Space between articles */
         --readings-margin-bottom: 3rem;
@@ -124,7 +160,7 @@ em {
         /* Reading titles */
         --typography-h3: 3.5rem;
         --h3-line-height: 3.5rem;
-        --h3-padding: 1rem;
+        --h3-padding: 1.8rem;
 
         /* Author small */
         --author-small-padding: 1rem;
@@ -133,13 +169,21 @@ em {
 
         --about-padding-top: 6rem;
         --about-margin-top: -5rem;
+
+        --typography-question: 2rem;
+        --question-padding-bottom: 10rem;
     }
 
     .about-red,
     .about-yellow,
     .about-blue {
-        max-width: 80vw;
-        margin-left: 10vw;
+        max-width: 75vw;
+        margin-left: 15vw;
+    }
+
+    .intro-text {
+        max-width: 90vw;
+        margin-left: 5vw;
     }
 
 }

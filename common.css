@@ -30,10 +30,6 @@ html {
     scroll-behavior: smooth;
 }
 
-main {
-    margin-bottom: calc(2 * var(--margin));
-}
-
 nav {
     font-family: var(--typography-nav);
     display: flex;

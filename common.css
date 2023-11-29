@@ -276,7 +276,6 @@ blockquote > p {
 /* Footer Style */
 footer {
     display: flex;
-    background: black;
     align-items: left;
 
     padding-left: var(--margin);
@@ -288,7 +287,6 @@ footer {
 footer p {
     font-family: 'IBM Plex Mono', monospace;
     font-size: var(--typography-footerp);
-    color: white;
     text-transform: uppercase;
     
     padding-right: var(--footer-p-padding);

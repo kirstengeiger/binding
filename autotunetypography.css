@@ -49,13 +49,13 @@ h1 {
         --author-padding-top: 11rem;
         --author-padding-bottom: 2rem;
         --author-margin-top: -7.5rem;
-   }
+    }
 
-   h1 {
+    h1 {
         max-width: 100vw;
-   }
+    }
 
-    article {
+    .solo-readings {
         margin-left: 30vw;
     }
 }
@@ -70,13 +70,13 @@ h1 {
         --author-padding-top: 12rem;
         --author-padding-bottom: 2rem;
         --author-margin-top: -9rem;
-   } 
+    } 
 
-   h1 {
+    h1 {
         max-width: 80vw;
-   } 
+    } 
 
-   article {
+    .solo-readings {
         margin-left: 30vw;
     }
 }
@@ -114,7 +114,7 @@ h1 {
         max-width: 100vw;
     } 
 
-    article {
+    .solo-readings {
         margin-left: 40vw;
     }
 }

@@ -1,15 +1,26 @@
-body {
-    background-color: white;
-}
-
 h1 {
     align-items: center;
     text-align: center;
+
     padding-top: calc(4 * var(--margin));
+    padding-bottom: calc(4 * var(--margin));
 }
 
 .maintitle-index {
     background: black
+}
+
+.intro {
+    background: #F0E6D3;
+    border: 2px black;
+    border-style: solid;
+    
+    padding-top: var(--article-padding);
+    padding-bottom: var(--article-padding);
+    margin-top: var(--article-margin);
+    margin-bottom: var(--article-margin);
+    margin-left: var(--article-margin);
+    margin-right: var(--article-margin);
 }
 
 a {
@@ -35,6 +46,10 @@ a {
         --typography-h1: 5rem;
         --h1-line-height: 4.5rem;
         --h1-margin: 4rem;
+
+         /* Article */
+         --article-padding: 1rem;
+         --article-margin: 1.5rem;
     }
 }
 

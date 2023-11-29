@@ -194,7 +194,7 @@ h1 {
     text-decoration: underline;
 }
 
-article:not([id="index"]) {
+.solo-readings {
     background-color: #F0E6D3;
     border: 2px black;
     border-style: solid;

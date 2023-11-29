@@ -144,7 +144,6 @@ h1 {
     color: white;
     line-height: var(--h1-line-height);
 
-    padding-top: calc(2 * var(--margin));
     margin-top: var(--h1-margin);
     margin-left: var(--margin);
     margin-right: var(--margin);
@@ -245,36 +244,16 @@ article p:nth-child(1){
 blockquote {
     margin-top: var(--typography-margin);
     margin-bottom: var(--typography-margin);
-    z-index: -1;
-
 }
 
 blockquote > p {
+    font-size: var(--typography-blockquote);
+    line-height: var(--typography-blockquote);
     font-family: 'Lora', serif;
     font-weight: 800;
     -webkit-hyphens: manual; /* Safari uses prefix. */
 	hyphens: manual;
-}
-
-/* Parent Element */
-.black {
-    font-size: var(--typography-blockquote);
-    line-height: calc(1 * var(--typography-blockquote));
-    color: black;
-
-    position: relative;
-    padding-bottom: -30rem;
-}
-
-/* Child Element */
-.white {
-    transform-origin: top left;
-    transform: scale(1.5);
-    color: white;
-
-    position: absolute;
-    top: 0;
-    left: 0; 
+    text-shadow: 20px 10px white;
 }
 
 /* In-article links */
@@ -372,9 +351,9 @@ footer p {
         margin-left: calc(-1.5 * var(--gutter));
     }
 
-    blockquote {
+    /* blockquote {
         max-width: 80vw;
-    }
+    } */
 }
 
 @media (min-width: 500px) {
@@ -386,10 +365,10 @@ footer p {
         --margin-blockquote: 3rem;
     }
     
-    blockquote {
+    /* blockquote {
         max-width: 80vw;
         padding-bottom: 1.5rem;
-    }
+    } */
     
     .white {
         margin-bottom: var(--margin);
@@ -452,9 +431,9 @@ footer p {
         max-width: 65vw;
     }
 
-    blockquote {
+    /*blockquote {
         max-width: 60vw;
-    }
+    }*/
 
     article p {
         max-width: 80vw;
@@ -554,7 +533,7 @@ footer p {
         --h2-padding: 20px;
         
         /* Blockquote */
-        --typography-blockquote: 2rem; 
+        --typography-blockquote: 2.5rem; 
         
         /* Embed links */
         --typography-a: 1.6rem; 
@@ -583,16 +562,8 @@ footer p {
     }
 
     blockquote {
+        padding-bottom: 5rem;
         max-width: 50vw;
-        padding-bottom: 1.5rem;
-    }
-
-    .black {
-        padding-left: var(--gutter);
-    }
-
-    .white {
-        max-width: 30vw;
     }
 
     article p {

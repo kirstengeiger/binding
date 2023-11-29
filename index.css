@@ -42,6 +42,11 @@ article {
     margin-bottom: var(--readings-margin-bottom);
 }
 
+/* Readings Chosen Section*/
+.selected-readings {
+    background-color: black;
+}
+
 /* Title of Each Article */
 h3 {
     font-family: 'Hanken Grotesk', sans-serif;
@@ -53,7 +58,7 @@ h3 {
 }
 
 .reading-link {
-    color: black;
+    color: white;
 }
 
 .reading-link:hover {
@@ -82,8 +87,10 @@ h3 {
     background-color: var(--blue);
 }
 
-p {
+/* Blurb about each reading */
+.selected-readings p {
     font-size: var(--context-typography);
+    color: white;
 
     padding-top: var(--context-padding-top);
     padding-left: var(--context-padding);

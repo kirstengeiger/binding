@@ -6,6 +6,13 @@ h1 {
     padding-bottom: calc(4 * var(--margin));
 }
 
+article {
+    margin-top: var(--article-margin);
+    margin-bottom: var(--article-margin);
+    margin-left: var(--article-margin);
+    margin-right: var(--article-margin);
+}
+
 .maintitle-index {
     background: black
 }
@@ -17,10 +24,35 @@ h1 {
     
     padding-top: var(--article-padding);
     padding-bottom: var(--article-padding);
-    margin-top: var(--article-margin);
-    margin-bottom: var(--article-margin);
-    margin-left: var(--article-margin);
-    margin-right: var(--article-margin);
+}
+
+/* Title of Each Article */
+h3 {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: var(--typography-h3);
+    font-weight: 600;
+    line-height: var(--h3-line-height);
+}
+
+.red {
+    color: var(--red);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.author-small {
+    background-color: black;
+    color: white;
+    padding: var(--author-small-padding);
+
+    margin-top: var(--author-small-margin);
+    margin-left: var( --author-small-left);
 }
 
 a {
@@ -47,9 +79,19 @@ a {
         --h1-line-height: 4.5rem;
         --h1-margin: 4rem;
 
-         /* Article */
-         --article-padding: 1rem;
-         --article-margin: 1.5rem;
+        /* Reading titles */
+        --typography-h3: 3.5rem;
+        --h3-line-height: 3.5rem;
+        --h3-padding: 1rem;
+
+        /* Author small */
+        --author-small-padding: 1rem;
+        --author-small-margin: -1rem;
+        --author-small-left: 3rem;
+
+        /* Article */
+        --article-padding: 1rem;
+        --article-margin: 1.5rem;
     }
 }
 
